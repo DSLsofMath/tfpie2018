@@ -218,3 +218,8 @@ TSWLatexianTemp*
 
 # expex forward references with \gathertags
 *-tags.tex
+
+*~
+src/dslm.pag
+src/dslm.tex
+src/dslm.pdf

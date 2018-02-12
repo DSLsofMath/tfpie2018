@@ -6,7 +6,7 @@
 \def\textmu{}
 
 \usepackage{amsmath}
-%include dslmagda.fmt
+%include dslmagda.format
 
 \title{TODO: new title needed - was: Domain-Specific Languages of Mathematics:
    Presenting Mathematical Analysis Using Functional Programming}
