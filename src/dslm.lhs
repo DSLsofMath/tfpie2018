@@ -11,6 +11,7 @@
 \RequirePackage{ucs}
 %include dslmagda.format
 %include dslm.format
+\usepackage{todonotes}
 
 % the `doubleequals' macro is due to Jeremy Gibbons
 \def\doubleequals{\mathrel{\unitlength 0.01em
