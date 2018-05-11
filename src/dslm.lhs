@@ -33,7 +33,7 @@
   \institute{Chalmers Univ. of Technology}
   \email{\quad patrikj@@chalmers.se}
 \and
-  Sólrún Einarsdóttir
+  Sólrún Halla Einarsdóttir
   \institute{Chalmers Univ. of Technology}
   \email{\quad slrn@@chalmers.se}
 \and
@@ -43,7 +43,7 @@
 }
 
 \def\titlerunning{Examples from DSLs of Mathematics}
-\def\authorrunning{P. Jansson \& S. Einarsdóttir \& C. Ionescu}
+\def\authorrunning{P. Jansson \& S. H. Einarsdóttir \& C. Ionescu}
 \newcommand{\event}{7th International Workshop on Trends in Functional Programming in Education, TFPIE 2018}
 
 \DeclareMathOperator{\Drop}{Drop}
@@ -65,6 +65,7 @@
 
 \section{Introduction}
 
+
 TODO: textify background and motivation: What is ``DSLs of Math''?
 
   ``Domain Specific Languages of Mathematics''
@@ -73,7 +74,7 @@ TODO: textify background and motivation: What is ``DSLs of Math''?
   \begin{itemize}
   \item A BSc-level course (2016-01 CeIo, 2017 onwards: PaJa, DaSc)
 
-   TODO: more on current status (student counts, hints about results from LADOK)
+
 
   \item A pedagogical project to develop the course (DaHe, SoEi)
 
@@ -90,23 +91,52 @@ TODO: textify background and motivation: What is ``DSLs of Math''?
   DSL examples: Power series, Differential equations, Linear Algebra
 
 
-TODO: cite the lecture notes: \cite{JanssonIonescuDSLsofMathCourse}
-
-TODO: cite the earlier TFPIE paper \cite{DBLP:journals/corr/IonescuJ16}
+At the workshop on Trends in Functional Programming in Education (TFPIE) in 2015 Ionescu and Jansson \cite{DBLP:journals/corr/IonescuJ16} presented the approach underlying the DSLsofMath course even before the first course instance.
+%
+We were then encouraged to come back to present our experience and the student results.
+%
+Now, three years later, we have seen three groups of learners attend the course, and the first two groups have also continued to the difficult courses in the third year.
+%*TODO: what is the best wording?: class / cohort / group / form ...
+\todo{more on current status (student counts, hints about results from LADOK)}
 
 \section{Types in Mathematics}
 
+The DSLsofMath lecture notes \cite{JanssonIonescuDSLsofMathCourse}
+have evolved from raw text notes for the first instance to 152 pages
+of PDF generated from literate Haskell + LaTeX sources for the third
+instance.
+%
+To give the reader a feeling for the course contents, we will show two
+smaller and, in the next section, one larger examples from the lecture notes.
 
-\subsection{Two examples}
+\subsection{Two examples: limits and derivatives}
 \label{subsec:twoexamples}
 
+In many chapters we start from a text book definition and ``tease it
+apart'' to a identify parameters, types, and to help the students
+understand exactly what it means.
+%
+When we first presented the course
+\cite{DBLP:journals/corr/IonescuJ16}, we stressed the importance of
+syntax and semantics, types and specifications.
+%
+As the material developed we noticed that variable binding (and scope)
+is also an important (and in mathematical texts often implicit)
+ingredient.
+%
+In our first example here, limits, we show the students that an
+innocent-looking ``if A then B'' can actually implicitly bind one of
+the names occurring in A.
 
-\paragraph{Case 1: limits \cite{adams2010calculus}}
+\paragraph{Case 1:  The limit of a function}
+
+This case is from Chapter two of the DSLsofMath lecture notes which
+talks about the definition of the limit of a function of type |REAL ->
+REAL| from \cite{adams2010calculus}:
 
 \begin{quote}
   We say that \(f(x)\) \textbf{approaches the limit} \(L\) as \(x\)
   \textbf{approaches} \(a\), and we write
-\vspace{-0.5cm}
 
   \[\lim_{x\to a} f(x) = L,\]
 
@@ -121,25 +151,57 @@ TODO: cite the earlier TFPIE paper \cite{DBLP:journals/corr/IonescuJ16}
 
 \end{quote}
 
-Four parts: name |x|, point |a|, expr.\ \(f(x)\), limit |L|.
-
-Name + expr. combines to just |f|: thus three parts: |a|, |f|, and |L|.
-
-%format Dom f = "\mathcal{D}" f
-
-First attempt:
+\noindent
+The |lim| notation has four components: a variable name |x|, a point
+|a| an expression \(f(x)\) and the limit |L|.
+%
+The variable name + the expression can be combined into just the
+function |f| and this leaves us with three essential components: |f|,
+|a|, and |L|.
+%
+Thus, |lim| can be seen as a ternary (3-argument) predicate which is
+satisfied if the limit of |f| exists at |a| and equals |L|.
+%
+If we apply our logic toolbox we can define |lim| starting something like this:
+%
 \begin{spec}
-lim a f L  =  Forall (epsilon > 0) (Exists (delta > 0) (P epsilon delta))
-  where  P epsilon delta = (0 < absBar (x - a) < delta) => (x `elem` Dom f  && absBar (f x - L) < epsilon))
+lim f a L  =  Forall (epsilon > 0) (Exists (delta > 0) (P epsilon delta))
 \end{spec}
-
-Where did |x| come from?
-
-Second attempt:
+%
+It is often useful to introduce a local name (like |P| here) to help
+break the definition down into more manageable parts.
+%
+If we now naively translate the last part we get this ``definition''
+for |P|:
+%
+\begin{spec}
+{-"\quad"-}  where  P epsilon delta = (0 < absBar (x - a) < delta) => (x `elem` Dom f  && absBar (f x - L) < epsilon))
+\end{spec}
+%
+Note that there is a scoping problem: we have |f|, |a|, and |L| from
+the ``call'' to |lim| and we have |epsilon| and |delta| from the two
+quantifiers, but where did |x| come from?
+%
+It turns out that the formulation ``if \ldots then \ldots'' hides a
+quantifier that binds |x|.
+%
+Thus we get this definition:
+%
 \begin{spec}
 lim a f L  =  Forall (epsilon > 0) (Exists (delta > 0) (Forall x (P epsilon delta x)))
   where  P epsilon delta x = (0 < absBar (x - a) < delta) => (x `elem` Dom f  && absBar (f x - L) < epsilon))
 \end{spec}
+%
+The predicate |lim| can be shown to be a partial function of two
+arguments, |f| and |a|.
+%
+This means that each function |f| can have \emph{at most} one limit
+|L| at a point |a|.
+%
+(This is not evident from the definition and proving it is a good
+exercise.)
+
+%format Dom f = "\mathcal{D}" f
 
 \paragraph{Case 2: derivative}
 
@@ -522,51 +584,4 @@ The \href{https://github.com/DSLsofMath/BScProj2018/tree/master/Physics}{source 
 
 \bibliographystyle{../eptcsstyle/eptcs}
 \bibliography{dslm}
-
-%% \appendix
-%% \section{Educational context and evaluation}
-
-%% In a first instance, the new course will be an elective course for the
-%% second or third year within the BSc programs in CS, CSE, SE, and Math.
-%% %
-%% The prerequisites are informally one full time year (60 hec) of
-%% university level study consisting of a mix of mathematics and computer
-%% science.
-%% %
-%% More formally:
-
-%% \begin{quote}
-%%   The student should have successfully completed:
-%%   \begin{itemize}
-%%   \item a course in discrete mathematics as for example Introductory
-%%     Discrete Mathematics.
-%%   \item 15 hec in mathematics, for example Linear Algebra and Calculus
-%%   \item 15 hec in computer science, for example (Introduction to
-%%     Programming or Programming with Matlab) and Object-oriented
-%%     Software Development
-%%   \item an additional 22.5 hec of any mathematics or computer science
-%%     courses.
-%%   \end{itemize}
-%% \end{quote}
-
-
 \end{document}
-
-
-In part, we feel that this is because the logic-based
-approach that works in discrete mathematics is too low-level for the
-kind of abstractions needed in real and complex analysis.  In
-particular, the treatment of functions and datatypes is somewhat
-shallow: there are no higher-order functions, recursion is only
-treated in the context of recurrence relations for sequences, there is
-no discussion of fixed points, and no inductive (let alone
-co-inductive) datatypes.
-
-
-From the review file:
-
-Concepts which cannot be implemented will be dealt with on a
-case-by-case basis: we approximate real numbers by floats (and mention
-rationals and interval arithmetic as alternatives), we implement some
-functions as relations (and mention property based testing and
-interactive theorem proving), etc.
