@@ -76,7 +76,9 @@ TODO: textify background and motivation: What is ``DSLs of Math''?
 
   \item A pedagogical project to develop the course (DaHe, SoEi)
 
-  \item A BSc thesis project ``DSLsofMath for other courses''
+  \item A BSc thesis project ``Learn You a Physics'' (see appendix
+     \ref{app:LearnYouAPhysics})
+
   \end{itemize}
 
   Aim: ``\ldots improve the mathematical education of computer
@@ -86,8 +88,10 @@ TODO: textify background and motivation: What is ``DSLs of Math''?
 
   DSL examples: Power series, Differential equations, Linear Algebra
 
-TODO: cite the lecture notes
 
+TODO: cite the lecture notes: \cite{JanssonIonescuDSLsofMathCourse}
+
+TODO: cite the earlier TFPIE paper \cite{DBLP:journals/corr/IonescuJ16}
 
 \section{Types in Mathematics}
 
@@ -466,6 +470,22 @@ TODO[Solrun] add summary of the student results as well
 \end{itemize}
 
 \url{https://github.com/DSLsofMath/DSLsofMath/blob/master/Course2018.md}
+
+
+\section{BSc project ``Learn you a Physics''}
+\label{app:LearnYouAPhysics}
+
+The online learning material \href{https://dslsofmath.github.io/BScProj2018/}{``Learn you a Physics''} (by E. Sjöström, O. Lundström, J. Johansson, B. Werner) is the result of a BSc project at Chalmers (supervised by P. Jansson) where the goal is to create an introductory learning material for physics aimed at programmers with a basic understanding of Haskell.
+%
+It does this by identifying key areas in physics with a well defined scope, for example dimensional analysis or single particle mechanics, and develops a domain specific language around each of these areas.
+%
+The implementation of these DSL's are the meat of the learning material with accompanying text to explain every step and how it relates to the physics of that specific area.
+%
+The text is written in such a way as to be as non-frightening as possible, and to only require a beginner knowledge in Haskell.
+%
+Inspiration is taken from \href{http://learnyouahaskell.com/}{Learn you a Haskell for Great Good} and the project \href{https://github.com/DSLsofMath/DSLsofMath}{DSLsofMath} at Chalmers and University of Gothenburg.
+%
+The \href{https://github.com/DSLsofMath/BScProj2018/tree/master/Physics}{source code} and \href{https://dslsofmath.github.io/BScProj2018/}{learning material} is freely available online.
 
 
 
