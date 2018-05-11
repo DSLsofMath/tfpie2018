@@ -108,9 +108,8 @@ instance.
 %
 To give the reader a feeling for the course contents, we will show two
 smaller and, in the next section, one larger examples from the lecture notes.
-
-\subsection{Two examples: limits and derivatives}
-\label{subsec:twoexamples}
+%
+The two smaller examples are limits and derivatives.
 
 In many chapters we start from a text book definition and ``tease it
 apart'' to a identify parameters, types, and to help the students
@@ -128,7 +127,8 @@ In our first example here, limits, we show the students that an
 innocent-looking ``if A then B'' can actually implicitly bind one of
 the names occurring in A.
 
-\paragraph{Case 1:  The limit of a function}
+\subsection{Case 1:  The limit of a function}
+\label{sec:LimitOfFunction}
 
 This case is from Chapter two of the DSLsofMath lecture notes which
 talks about the definition of the limit of a function of type |REAL ->
@@ -156,8 +156,8 @@ The |lim| notation has four components: a variable name |x|, a point
 |a| an expression \(f(x)\) and the limit |L|.
 %
 The variable name + the expression can be combined into just the
-function |f| and this leaves us with three essential components: |f|,
-|a|, and |L|.
+function |f| and this leaves us with three essential components: |a|, |f|,
+and |L|.
 %
 Thus, |lim| can be seen as a ternary (3-argument) predicate which is
 satisfied if the limit of |f| exists at |a| and equals |L|.
@@ -165,7 +165,7 @@ satisfied if the limit of |f| exists at |a| and equals |L|.
 If we apply our logic toolbox we can define |lim| starting something like this:
 %
 \begin{spec}
-lim f a L  =  Forall (epsilon > 0) (Exists (delta > 0) (P epsilon delta))
+lim a f L  =  Forall (epsilon > 0) (Exists (delta > 0) (P epsilon delta))
 \end{spec}
 %
 It is often useful to introduce a local name (like |P| here) to help
@@ -203,9 +203,12 @@ exercise.)
 
 %format Dom f = "\mathcal{D}" f
 
-\paragraph{Case 2: derivative}
+\subsection{Case 2: Typing Mathematics: derivative of a function}
 
 We now assume limits exist and use |lim| as a function from |a| and |f| to |L|.
+%
+Here we dissect one of the classical definitions of the derivative
+from \cite{adams2010calculus}:
 
 \begin{quote}
   The \textbf{derivative} of a function |f| is another function |f'| defined by
@@ -218,29 +221,61 @@ We now assume limits exist and use |lim| as a function from |a| and |f| to |L|.
   number). If \(f'(x)\) exists, we say that |f| is \textbf{differentiable}
   at |x|.
 \end{quote}
+%
+We can start by assigning types to the expressions in the definition.
+%
+Let's write |X| for the domain of |f| so that we have |f : X -> REAL|
+and |X included REAL| (or, equivalently, |X : PS REAL|).
+%
+If we denote with |Y| the subset of |X| for which |f| is
+differentiable we get |f' : Y -> REAL|.
+%
+Thus, the operation which maps |f| to |f'| has type |(X->REAL) ->
+(Y->REAL)|.
+%
+Unfortunately, the only notation for this operation given (implicitly)
+in the definition is a postfix prime.
+%
+To make it easier to see we we use a prefix |D| instead and we can
+thus write |D : (X->REAL) -> (Y->REAL)|.
+%
+We will often assume that |X = Y| so that we can can see |D| as
+preserving the type of its argument.
 
-We can write
+Now, with the type of |D| sorted out, we can turn to the actual
+definition of the function |D f|.
+%
+The definition is given for a fixed (but arbitrary) |x|.
+%**DONE: removed this back reference now when they are in direct sequence
+% (At this point it is useful to briefly look back to the definition of
+% ``limit of a function'' in Section~\ref{sec:LimitOfFunction}.)
+%
+The |lim| expression is using the (anonymous) function |g h = frac
+(f(x+h) - f x) h| and that the limit of |g| is taken at |0|.
+%
+Note that |g| is defined in the scope of |x| and that its definition
+uses |x| so it can be seen as having |x| as an implicit, first
+argument.
+%
+To be more explicit we write |phi x h = frac (f(x+h) - f x) h| and take
+the limit of |phi x| at 0.
+%
+So, to sum up, |D f x = lim 0 (phi x)|.
+%
+We could go one step further by noting that |f| is in the scope of |phi| and used in its definition.
+%
+Thus the function |psi f x h = phi x h|, or |psi f = phi|, is used.
+%
+With this notation we obtain a point-free definition that can come in
+handy:
+%
+|D f = limAt 0 . psi f|.
 
-\savecolumns
-\begin{spec}
-  D f x  = lim 0 g        where            g  h = frac (f(x+h) - f x) h
-\end{spec}
-
-TODO: add explanation for the next step
-
-\restorecolumns
-\begin{spec}
-  D f x  = lim 0 (phi x)  where       phi  x  h = frac (f(x+h) - f x) h
-\end{spec}
-
-TODO: add explanation for the next step
-
-\restorecolumns
-\begin{spec}
-  D f    = lim 0 . psi f  where  psi  f    x  h = frac (f(x+h) - f x) h
-\end{spec}
-
-Examples:
+The key here is that we name, type, and specify the operation of
+computing the derivative (of a one-argument function).
+%
+We will use this operation quite a bit in the rest of the book, but
+here are just a few examples to get used to the notation.
 
 \begin{spec}
   D : (REAL->REAL) -> (REAL->REAL)
@@ -252,14 +287,48 @@ Examples:
   sq''  =  D sq'  = D double = c2 = const 2
 \end{spec}
 
-Note: we cannot \emph{implement} |D| of this type in Haskell.
+
+What we cannot do at this stage is to actually \emph{implement} |D| in
+Haskell.
+%
+If we only have a function |f : REAL -> REAL| as a ``black box'' we
+cannot really compute the actual derivative |f' : REAL -> REAL|, only
+numerical approximations.
+%
+But if we also have access to the ``source code'' of |f|, then we can
+apply the usual rules we have learnt in calculus.
 %
 
-Given only |f : REAL -> REAL| as a ``black box'' we
-cannot compute the actual derivative |f' : REAL -> REAL|.
+% We can write
+%
+% \savecolumns
+% \begin{spec}
+%   D f x  = lim 0 g        where            g  h = frac (f(x+h) - f x) h
+% \end{spec}
+%
+% TODO: add explanation for the next step
+%
+% \restorecolumns
+% \begin{spec}
+%   D f x  = lim 0 (phi x)  where       phi  x  h = frac (f(x+h) - f x) h
+% \end{spec}
+%
+% TODO: add explanation for the next step
+%
+% \restorecolumns
+% \begin{spec}
+%   D f    = lim 0 . psi f  where  psi  f    x  h = frac (f(x+h) - f x) h
+% \end{spec}
 
-We need the ``source code'' of |f| to apply rules from calculus.
 
+% Note: we cannot \emph{implement} |D| of this type in Haskell.
+% %
+%
+% Given only |f : REAL -> REAL| as a ``black box'' we
+% cannot compute the actual derivative |f' : REAL -> REAL|.
+%
+% We need the ``source code'' of |f| to apply rules from calculus.
+%
 
 
 
