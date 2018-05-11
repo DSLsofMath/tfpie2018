@@ -8,6 +8,8 @@
 \usepackage{amsmath}
 %include dslmagda.format
 
+\usepackage{todonotes}
+
 \title{TODO: new title needed - was: Domain-Specific Languages of Mathematics:
    Presenting Mathematical Analysis Using Functional Programming}
 
@@ -17,7 +19,7 @@ Patrik Jansson
 \institute{Chalmers Univ. of Technology}
 \email{\quad patrikj@@chalmers.se}
 \and
-  Sólrún Einarsdóttir
+  Sólrún Halla Einarsdóttir
 \institute{Chalmers Univ. of Technology}
 \email{\quad slrn@@chalmers.se}
 \and
@@ -27,7 +29,7 @@ Cezar Ionescu
 }
 
 \def\titlerunning{DSLs of Mathematics}
-\def\authorrunning{P. Jansson \& S. Einarsdóttir \& C. Ionescu}
+\def\authorrunning{P. Jansson \& S. H. Einarsdóttir \& C. Ionescu}
 \newcommand{\event}{7th International Workshop on Trends in Functional Programming in Education, TFPIE 2018}
 
 \DeclareMathOperator{\Drop}{Drop}
@@ -73,8 +75,36 @@ TODO: cite the lecture notes
 
 \section{Evaluation and results}
 
-TODO: Describe how the ``measurements'' were done and interpret the results.
+% Describe how the ``measurements'' were done and interpret the results.
 
+We considered student results for students from the D program at Chalmers who
+started their studies in 2014 and 2015. In the spring of their second year at
+Chalmers (2016 and 2017), these students had the option of either taking the
+DSLsofMath course or \todo{what goes here?}.
+
+We considered only ``active'' students, that is, students who had signed up for
+at least half of the required courses in the D program during the semesters
+being considered (Fall 2014 - Fall 2017). This amounted to 145 students, where
+53 signed up for the DSLsofMath course (whereas 92 did not) and 34 of those 53
+passed the course.
+
+Our hypothesis was that taking our course would help prepare the students for
+the math-instensive compulsory courses in the third year which many students
+struggle with, Transforms, signals and systems (SSY080) and Reglerteknik (ERE103).
+
+\todo{Table with results of in/out group in those courses}
+\todo{Discuss results}
+\subsection{Students' previous results}
+We were curious to see how we could characterize the students who sign up for
+our course...
+
+\todo{discuss results}
+\todo{present numbers in table}
+
+\subsection{Significance of taking DSLsofMath}
+
+\todo{Is taking DSLM significant in improving future results or were the
+  students just better to begin with?}
 
 
 \section{Conclusions and future work}
