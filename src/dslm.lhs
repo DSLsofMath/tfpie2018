@@ -25,25 +25,23 @@
     \put(7,14){\line(1,0){25}} \put(45,14){\line(1,0){25}} \put(83,14){\line(1,0){25}}
   \end{picture}}}
 
-\title{TODO: new title needed - was: Domain-Specific Languages of Mathematics:
-   Presenting Mathematical Analysis Using Functional Programming}
+\title{Examples and Results from a BSc-level Course on\\ Domain Specific Languages of Mathematics}
 
-
- \author{
-Patrik Jansson
-\institute{Chalmers Univ. of Technology}
-\email{\quad patrikj@@chalmers.se}
+\author{
+  Patrik Jansson
+  \institute{Chalmers Univ. of Technology}
+  \email{\quad patrikj@@chalmers.se}
 \and
   Sólrún Einarsdóttir
-\institute{Chalmers Univ. of Technology}
-\email{\quad slrn@@chalmers.se}
+  \institute{Chalmers Univ. of Technology}
+  \email{\quad slrn@@chalmers.se}
 \and
-Cezar Ionescu
-\institute{Chalmers Univ. of Technology}
-\email{cezar@@chalmers.se}
+  Cezar Ionescu
+  \institute{Chalmers Univ. of Technology}%TODO: perhaps Oxford now?
+  \email{cezar@@chalmers.se}
 }
 
-\def\titlerunning{DSLs of Mathematics}
+\def\titlerunning{Examples from DSLs of Mathematics}
 \def\authorrunning{P. Jansson \& S. Einarsdóttir \& C. Ionescu}
 \newcommand{\event}{7th International Workshop on Trends in Functional Programming in Education, TFPIE 2018}
 
@@ -66,7 +64,7 @@ Cezar Ionescu
 
 \section{Introduction}
 
-TODO: background and motivation: What is ``DSLs of Math''?
+TODO: textify background and motivation: What is ``DSLs of Math''?
 
   ``Domain Specific Languages of Mathematics''
   \url{https://github.com/DSLsofMath/}
