@@ -342,11 +342,13 @@ apply the usual rules we have learnt in calculus.
 
 
 
-\section{Type inference and understanding}
+\section{Type inference and understanding: Lagrangian case study}
+\label{sec:Lagrangian}
 
-\subsection{Case 3: Lagrangian}
-
-  From \cite{sussman2013functional}:
+Our third case study from the lecture notes is the analysis of
+Lagrangian equations, also studied in Sussman and Wisdom 2013
+\cite{sussman2013functional} in their prologue on ``Programming and
+Understanding''.
 
 \begin{quote}
   A mechanical system is described by a Lagrangian function of the
@@ -366,9 +368,9 @@ What could this expression possibly mean?
 
 \end{quote}
 
-\[\frac{d}{dt} \frac{∂L}{∂\dot{q}} - \frac{∂L}{∂q} = 0\]
+To start answering the question, we start typing the elements involved:
 
-\begin{itemize}
+\begin{enumerate}
 \item The use of notation for ``partial derivative'', \(∂L / ∂q\), suggests
 that |L| is a function of at least a pair of arguments:
 \begin{spec}
@@ -385,18 +387,16 @@ So, if we let ``coordinates'' be just one coordinate, we can take |i =
   L : ℝ³ → ℝ
 \end{spec}
 %
-The ``system state'' here is a triple, of type |S = (T, Q, V)|,
+The ``system state'' here is a triple (of type |S = (T, Q, V) = ℝ³|)
 and we can call the the three components |t : T| for time, |q : Q| for
 coordinate, and |v : V| for velocity.
 %
-(|T = Q = V = ℝ|.)
-\end{itemize}
+(We use |T = Q = V = ℝ| in this example but it can help the reading to
+remember the different uses of |ℝ|.)
 
-\[\frac{d}{dt} \frac{∂L}{∂\dot{q}} - \frac{∂L}{∂q} = 0\]
-
-\begin{itemize}
-\item Looking again at \(∂L / ∂q\), \(q\) is the name of a variable,
-  one of the 3 args to \(L\).
+\item Looking again at the same derivative, \(∂L / ∂q\) suggests that
+  \(q\) is the name of a real variable, one of the three arguments to
+  \(L\).
 %
   In the context, which we do not have, we would expect to find
   somewhere the definition of the Lagrangian as
@@ -407,7 +407,7 @@ coordinate, and |v : V| for velocity.
   \end{spec}
 
 \item therefore, \(∂L / ∂q\) should also be a function of the same
-  triple:
+  triple of arguments:
 
   \begin{spec}
     (∂L / ∂q) : (T, Q, V) -> ℝ
@@ -422,11 +422,7 @@ coordinate, and |v : V| for velocity.
     const 0  :  (T, Q, V)  →  ℝ
     const 0     (t, q, v)  =   0
   \end{spec}
-\end{itemize}
 
-
-\[\frac{d}{dt} \frac{∂L}{∂\dot{q}} - \frac{∂L}{∂q} = 0\]
-\begin{itemize}
 \item We now have a problem: |d / dt| can only be applied to functions
   of \emph{one} real argument |t|, and the result is a function of one
   real argument:
@@ -449,26 +445,24 @@ But we already typed it as |(T, Q, V) → ℝ|, contradiction!
 %
   We would expect a variable name where we find \(\dot{q}\), but
   \(\dot{q}\) is the same as \(dq / dt\), a function.
-\end{itemize}
 
-
-\[\frac{d}{dt} \frac{∂L}{∂\dot{q}} - \frac{∂L}{∂q} = 0\]
-\begin{itemize}
-\item The only immediate candidate for an application of \(d/dt\) is
-  ``a path that gives the coordinates for each moment of time''.
+\item Looking back at the description above, we see that the only
+  immediate candidate for an application of \(d/dt\) is ``a path that
+  gives the coordinates for each moment of time''.
 %
   Thus, the path is a function of time, let us say
 %
   \begin{spec}
-    w  :  T → Q  -- with |T| for time and |Q| for coords (|q : Q|)
+    w  :  T → Q  -- with |T = ℝ| for time and |Q = ℝ| for coordinates (|q : Q|)
   \end{spec}
 
   We can now guess that the use of the plural form ``equations'' might
   have something to do with the use of ``coordinates''.
 %
-  In an |n|-dim.\ space, a position is given by |n| coordinates.
+  In an |n|-dimensional space, a position is given by |n|
+  coordinates.
 %
-  A path would then be
+  A path would then be a function
 %
   \begin{spec}
     w  :  T → Q  -- with |Q = ℝⁿ|
@@ -481,10 +475,6 @@ But we already typed it as |(T, Q, V) → ℝ|, contradiction!
 %
   We will use |n=1| for the rest of this example.
 
-\end{itemize}
-
-\[\frac{d}{dt} \frac{∂L}{∂\dot{q}} - \frac{∂L}{∂q} = 0\]
-\begin{itemize}
 \item Now that we have a path, the coordinates at any time are given
   by the path.
   %
@@ -506,17 +496,31 @@ But we already typed it as |(T, Q, V) → ℝ|, contradiction!
     expand : (T → Q) → (T → (T, Q, V))
     expand w t  =  (t, w t, D w t)
   \end{spec}
-\end{itemize}
 
-\[\frac{d}{dt} \frac{∂L}{∂\dot{q}} - \frac{∂L}{∂q} = 0\]
-\vspace{-0.5cm}
-\begin{itemize}
-\item With |expand| in our toolbox we can fix the typing problem.
+\item With |expand| in our toolbox we can fix the typing problem in
+  item \ref{item:L:contra} above.
+  %
+  The Lagrangian is a ``function of the system state (time,
+  coordinates, and velocities)'' and the ``expanded path'' (|expand
+  w|) computes the state from just the time.
+  %
+  By composing them we get a function
+  %
+  \begin{spec}
+    L . (expand w)  :  T -> ℝ
+  \end{spec}
+  %
+  which describes how the Lagrangian would vary over time if the
+  system would evolve according to the path |w|.
+
+  This particular composition is not used in the equation, but we do
+  have
   %
   \begin{spec}
     (∂L / ∂q) . (expand w)  :  T -> ℝ
   \end{spec}
-
+  %
+  which is used inside |d / dt|.
 
 \item We now move to using |D| for |d / dt|, |D₂| for |∂ / ∂q|, and
   |D₃| for |∂ / ∂dotq|.
@@ -538,26 +542,36 @@ But we already typed it as |(T, Q, V) → ℝ|, contradiction!
   \begin{spec}
     D (D₃ L ∘ expand w)  =  D₂ L ∘ expand w
   \end{spec}
+  %
+  where both sides are functions of type |T → ℝ|.
 
-\end{itemize}
-
-\paragraph{Case 3: Lagrangian, summary}
-
-  ``A path is allowed if and only if it satisfies the Lagrange
-  equations'' means that this equation is a predicate on paths:
+\item ``A path is allowed if and only if it satisfies the Lagrange
+  equations'' means that this equation is a predicate on paths (for a
+  particular |L|):
   %
   \begin{spec}
     Lagrange(L, w) =  {-"\qquad"-} D (D₃ L ∘ expand w) == D₂ L ∘ expand w
   \end{spec}
   %
+  where we use |(==)| to avoid confusion with the equlity sign (|=|)
+  used for the definition of the predicate.
+\end{enumerate}
 
-  Thus: If we can describe a mechanical system in terms of ``a
-  Lagrangian'' (|L : S -> ℝ|), then we can use the predicate to check
-  if a particular candidate path |w : T → ℝ| qualifies as a ``motion
-  of the system'' or not.
+So, we have figured out what the equation ``means'', in terms of
+operators we recognise.
 %
-  The unknown of the equation is the path |w|, and the equation is an
-  example of a partial differential equation (a PDE).
+If we zoom out slightly we see that the quoted text means something
+like:
+%
+If we can describe the mechanical system in terms of ``a Lagrangian''
+(|L : S -> ℝ|), then we can use the equation to check if a particular
+candidate path |w : T → ℝ| qualifies as a ``motion of the system'' or
+not.
+%
+The unknown of the equation is the path |w|, and as the equation
+involves partial derivatives it is an example of a partial
+differential equation (a PDE).
+%
 
 
 
@@ -585,7 +599,7 @@ struggle with, Transforms, signals and systems (SSY080) and Reglerteknik (ERE103
 \subsection{Students' previous results}
 We were curious to see how we could characterize the students who sign up for
 our course...
-
+<
 \todo{discuss results}
 \todo{present numbers in table}
 
