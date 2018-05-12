@@ -568,7 +568,7 @@ But we already typed it as |(T, Q, V) → ℝ|, contradiction!
 We considered student results for students from the D program at Chalmers who
 started their studies in 2014 and 2015. In the spring of their second year at
 Chalmers (2016 and 2017), these students had the option of either taking the
-DSLsofMath course or \todo{what goes here?}.
+DSLsofMath course or the Concurrent Programming course.
 
 We considered only ``active'' students, that is, students who had signed up for
 at least half of the required courses in the D program during the semesters
@@ -614,6 +614,24 @@ our course...
 
 TODO[Solrun] add summary of the student results as well
 
+\subsection*{Acknowledgments}
+
+The support from Chalmers Quality Funding 2015 (Dnr C 2014-1712, based
+on Swedish Higher Education Authority evaluation results) is
+gratefully acknowledged.
+%
+Thanks also to R. Johansson (as Head of Programme in CSE) and P.
+Ljunglöf (as Vice Head of the CSE Department for BSc and MSc
+education) who provided continued financial support when the national
+political winds changed.
+%
+Thanks to D. Heurlin who provided many helpful comments during his
+work as a student research assistant in 2017.
+
+This work was partially supported by the projects GRACeFUL (grant
+agreement No 640954) and CoeGSS (grant agreement No 676547), which
+have received funding from the European Union’s Horizon 2020 research
+and innovation programme.
 
 
 \appendix
