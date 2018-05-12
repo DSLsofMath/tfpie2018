@@ -205,10 +205,12 @@ exercise.)
 
 \subsection{Case 2: Typing Mathematics: derivative of a function}
 
+The lecture notes includes some other material in between, but here we
+jump directly to dissecting one of the classical definitions of the
+derivative (from \cite{adams2010calculus}).
+%
 We now assume limits exist and use |lim| as a function from |a| and |f| to |L|.
 %
-Here we dissect one of the classical definitions of the derivative
-from \cite{adams2010calculus}:
 
 \begin{quote}
   The \textbf{derivative} of a function |f| is another function |f'| defined by
@@ -269,13 +271,22 @@ Thus the function |psi f x h = phi x h|, or |psi f = phi|, is used.
 With this notation we obtain a point-free definition that can come in
 handy:
 %
-|D f = limAt 0 . psi f|.
+|D f = lim 0 . psi f|.
+%
+To sum up, here are the steps again, now with typed helpers:
+
+\begin{spec}
+  D f x  = lim 0 g        where            g  h = frac (f(x+h) - f x) h; {-"\quad"-}  g    :                             REAL -> REAL
+  D f x  = lim 0 (phi x)  where       phi  x  h = frac (f(x+h) - f x) h;              phi  :                    REAL ->  REAL -> REAL
+  D f    = lim 0 . psi f  where  psi  f    x  h = frac (f(x+h) - f x) h;              psi  : (REAL -> REAL) ->  REAL ->  REAL -> REAL
+\end{spec}
+
 
 The key here is that we name, type, and specify the operation of
 computing the derivative (of a one-argument function).
 %
-We will use this operation quite a bit in the rest of the book, but
-here are just a few examples to get used to the notation.
+This operation is used quite a bit in the rest of the lecture notes,
+but here are just a few examples to get used to the notation.
 
 \begin{spec}
   D : (REAL->REAL) -> (REAL->REAL)
@@ -286,7 +297,6 @@ here are just a few examples to get used to the notation.
   sq'   =  D sq   = D (\x -> x^2) = D ({-"{}"-}^2) = (2*) = double
   sq''  =  D sq'  = D double = c2 = const 2
 \end{spec}
-
 
 What we cannot do at this stage is to actually \emph{implement} |D| in
 Haskell.
