@@ -91,11 +91,16 @@ TODO: textify background and motivation: What is ``DSLs of Math''?
   DSL examples: Power series, Differential equations, Linear Algebra
 
 
-At the workshop on Trends in Functional Programming in Education (TFPIE) in 2015 Ionescu and Jansson \cite{DBLP:journals/corr/IonescuJ16} presented the approach underlying the DSLsofMath course even before the first course instance.
+  At the workshop on Trends in Functional Programming in Education (TFPIE) in
+  2015 Ionescu and Jansson \cite{DBLP:journals/corr/IonescuJ16} presented the
+  approach underlying the DSLsofMath course even before the first course instance.
 %
-We were then encouraged to come back to present our experience and the student results.
+  We were then encouraged to come back to present our experience and the student
+  results.
 %
-Now, three years later, we have seen three groups of learners attend the course, and the first two groups have also continued to the difficult courses in the third year.
+  Now, three years later, we have seen three groups of learners attend the course,
+  and the first two groups have also continued to the difficult courses in the
+  third year.
 %*TODO: what is the best wording?: class / cohort / group / form ...
 \todo{more on current status (student counts, hints about results from LADOK)}
 
@@ -579,35 +584,70 @@ differential equation (a PDE).
 
 % Describe how the ``measurements'' were done and interpret the results.
 
-We considered student results for students from the D program at Chalmers who
+We considered student results for students from the D program at Chalmers
+\todo{briefly explain what the D program is} who
 started their studies in 2014 and 2015. In the spring of their second year at
 Chalmers (2016 and 2017), these students had the option of either taking the
 DSLsofMath course or the Concurrent Programming course.
 
 We considered only ``active'' students, that is, students who had signed up for
-at least half of the required courses in the D program during the semesters
+at least half of the compulsory courses in the D program during the semesters
 being considered (Fall 2014 - Fall 2017). This amounted to 145 students, where
 53 signed up for the DSLsofMath course (whereas 92 did not) and 34 of those 53
 passed the course.
 
+We had access to data on these students' results in all compulsory courses in
+the program as well as the more common elective courses.
+%
+At Chalmers students pass a course with a grade of 3, 4, or 5, with 5 being the
+highest grade, or fail the course with no specified grade. Students have many
+opportunities to retake exams from courses they took in past semesters, to
+attempt to obtain a passing score or improve their grade in the course.
+
+
+\subsection{Characterizing students who chose DSLsofMath}
+We were curious to see how we could characterize the students who sign up for
+our course, for instance whether they were likely to be students who had done
+well in mathematics in the past who were interested in studying more maths,
+or perhaps students who had struggled with mathematics in the past and were
+therefore looking for more support and new methods for studying maths.
+
+\todo[inline]{present numbers in table? Analyze significant factors?}
+\todo[inline]{Discuss results}
+
+
+\subsection{Results in third year courses}
 Our hypothesis was that taking our course would help prepare the students for
 the math-instensive compulsory courses in the third year which many students
 struggle with, Transforms, signals and systems (SSY080) and Reglerteknik (ERE103).
 
-\todo{Table with results of in/out group in those courses}
-\todo{Discuss results}
-\subsection{Students' previous results}
-We were curious to see how we could characterize the students who sign up for
-our course...
-<
-\todo{discuss results}
-\todo{present numbers in table}
+\todo[inline]{Table with results of in/out group in those courses}
+\todo[inline]{Discuss results}
+\todo{Compare groups with p-values?}
 
-\subsection{Significance of taking DSLsofMath}
+\subsubsection{Significance of taking DSLsofMath}
 
-\todo{Is taking DSLM significant in improving future results or were the
+\todo[inline]{Is taking DSLM significant in improving future results or were the
   students just better to begin with?}
 
+\subsection{Students' assessment of the course}
+\todo[inline]{Discuss results of Student evaluations or other indications of students'
+  opinions on the course}
+
+\section{Related work}
+
+\todo[inline]{Flesh out this section}
+
+\begin{itemize}
+\item Work on using functional programming to help teach mathematics to younger
+students:
+Bootstrap \cite{Schanzer:2018:ABA:3159450.3159498,Schanzer:2015:TSS:2676723.2677238,WrigRichLee2013oz}
+and others i.e. \cite{EPTCS270.2}
+\item Using Haskell to teach physics \cite{DBLP:journals/corr/Walck16} \cite{DBLP:journals/corr/Walck14}
+
+\item This paper presents some work on using FP to introduce more precision to
+  mathematical notation for university students: \cite{EPTCS106.3}
+\end{itemize}
 
 
 
@@ -626,7 +666,7 @@ our course...
     Algebra
   \end{itemize}
 
-TODO[Solrun] add summary of the student results as well
+\todo[inline]{TODO[Solrun] add summary of the student results as well}
 
 \subsection*{Acknowledgments}
 
