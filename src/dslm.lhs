@@ -605,21 +605,15 @@ opportunities to retake exams from courses they took in past semesters, to
 attempt to obtain a passing score or improve their grade in the course.
 
 
-\subsection{Characterizing students who chose DSLsofMath}
-We were curious to see how we could characterize the students who sign up for
-our course, for instance whether they were likely to be students who had done
-well in mathematics in the past who were interested in studying more maths,
-or perhaps students who had struggled with mathematics in the past and were
-therefore looking for more support and new methods for studying maths.
-
-\todo[inline]{present numbers in table? Analyze significant factors?}
-\todo[inline]{Discuss results}
-
-
 \subsection{Results in third year courses}
 Our hypothesis was that taking our course would help prepare the students for
 the math-instensive compulsory courses in the third year which many students
 struggle with, Transforms, signals and systems (SSY080) and Reglerteknik (ERE103).
+
+In the following table we see the pass rate and the mean grade for the
+above mentioned courses, where PASS represents the students who took the DSLsofMath
+course and passed it, IN is the group of students who took DSLsofMath (whether
+or not they passed), and OUT is the students who did not sign up for DSLsofMath.
 
 \begin{table}[h]
   \centering
@@ -635,13 +629,26 @@ struggle with, Transforms, signals and systems (SSY080) and Reglerteknik (ERE103
   \caption{Pass rate and mean grade in third year courses for students who took and
   passed DSLsofMath and those who did not.}
 \end{table}
-\todo[inline]{Discuss results}
-\todo{Compare groups with p-values?}
 
+As we can see, the students who took DSLsofMath had higher mean grades in the
+third-year courses and were more likely to pass, in particular those who managed
+to pass the DSLsofMath course.
+
+\subsubsection{Characterizing students who chose DSLsofMath}
+We were curious to see how we could characterize the students who sign up for
+our course, for instance whether they were likely to be students who had done
+well in mathematics in the past who were interested in studying more maths,
+or perhaps students who had struggled with mathematics in the past and were
+therefore looking for more support and new methods for studying maths.
+
+\todo[inline]{present numbers in table? Analyze significant factors?}
+\todo[inline]{Discuss results}
 \subsubsection{Significance of taking DSLsofMath}
 
 \todo[inline]{Is taking DSLM significant in improving future results or were the
   students just better to begin with?}
+\todo[inline]{Combine this section with the one above}
+
 
 \subsection{Students' assessment of the course}
 \todo[inline]{Discuss results of Student evaluations or other indications of students'
