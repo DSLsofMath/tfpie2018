@@ -583,10 +583,11 @@ Our hypothesis was that taking our course would help prepare the students for
 the math-instensive compulsory courses in the third year which many students
 struggle with, Transforms, signals and systems (SSY080) and Reglerteknik (ERE103).
 
-In the following table we see the pass rate and the mean grade for the
-above mentioned courses, where PASS represents the students who took the DSLsofMath
-course and passed it, IN is the group of students who took DSLsofMath (whether
-or not they passed), and OUT is the students who did not sign up for DSLsofMath.
+In the following table we see the pass rate and the mean grade (of those who
+passed) for the above mentioned courses, where PASS represents the students who
+took the DSLsofMath course and passed it, IN is the group of students who took
+DSLsofMath (whether or not they passed), and OUT is the students who did not
+sign up for DSLsofMath.
 
 \begin{table}[h]
   \centering
@@ -613,20 +614,37 @@ to take our course did so because they enjoyed mathematics, and were already
 more likely to succeed in the subsequent math-heavy courses regardless of
 whether they took our course.
 
-\subsubsection{Characterizing students who chose DSLsofMath}
-We were curious to see how we could characterize the students who sign up for
-our course, for instance whether they were likely to be students who had done
-well in mathematics in the past who were interested in studying more maths,
-or perhaps students who had struggled with mathematics in the past and were
-therefore looking for more support and new methods for studying maths.
+%\subsubsection{Characterising students who chose DSLsofMath}
+%We were curious to see how we could characterize the students who sign up for
+%our course, for instance whether they were likely to be students who had done
+%well in mathematics in the past who were interested in studying more maths,
+%or perhaps students who had struggled with mathematics in the past and were
+%therefore looking for more support and new methods for studying maths.
 
-\todo[inline]{present numbers in table? Analyze significant factors?}
-\todo[inline]{Discuss results}
-\subsubsection{Significance of taking DSLsofMath}
+We looked at the students' results from their first three semesters at Chalmers,
+prior to having the option of taking DSLsofMath. We were particularly interested
+in students' performance in the compulsory mathematics and physics courses.
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l*{3}{c}}
+                                      & PASS  & IN   & OUT  \\
+    \hline
+    Pass rate for first 3 semesters  & 97\%  & 92\% & 86\% \\
+    Mean grade for first 3 semesters & 3.95  & 3.81 & 3.50 \\
+    Math/physics pass rate           & 96\%  & 91\% & 83\% \\
+    Math/physics mean grade          & 4.01  & 3.84 & 3.55 \\
 
-\todo[inline]{Is taking DSLM significant in improving future results or were the
+  \end{tabular}
+  \caption{Pass rate and mean grade for courses taken prior to taking (or not
+    taking) DSLsofMath.}
+\end{table}
+
+
+%\subsubsection{Significance of taking DSLsofMath}
+\todo[inline]{Discuss these results}
+
+\todo[inline]{Is taking DSLM a significant factor in improving future results or were the
   students just better to begin with?}
-\todo[inline]{Combine this section with the one above}
 
 
 \subsection{Students' course assessment and resulting changes}
