@@ -2,6 +2,10 @@ functional programming
 computer science education
 calculus
 didactics
-Haskell
 formalisation
 correctness
+Haskell
+types
+syntax
+semantics
+scope

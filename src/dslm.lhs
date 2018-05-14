@@ -62,48 +62,50 @@
 
 \end{abstract}
 
-\todo{PaJa: keywords}
+\paragraph{Keywords:} functional programming, computer science education, calculus, didactics, formalisation, correctness, Haskell, types, syntax, semantics, scope
 
 \section{Introduction}
 
-
-TODO: textify background and motivation: What is ``DSLs of Math''?
-
-  ``Domain Specific Languages of Mathematics''
-  \url{https://github.com/DSLsofMath/}
-
-  \begin{itemize}
-  \item A BSc-level course (2016-01 CeIo, 2017 onwards: PaJa, DaSc)
-
-
-
-  \item A pedagogical project to develop the course (DaHe, SoEi)
-
-  \item A BSc thesis project ``Learn You a Physics'' (see appendix
-     \ref{app:LearnYouAPhysics})
-
-  \end{itemize}
-
-  Aim: ``\ldots improve the mathematical education of computer
-  scientists and the computer science education of mathematicians.''
-
-  Focus on types \& specifications, syntax \& semantics
-
-  DSL examples: Power series, Differential equations, Linear Algebra
-
-
-  At the workshop on Trends in Functional Programming in Education (TFPIE) in
-  2015 Ionescu and Jansson \cite{DBLP:journals/corr/IonescuJ16} presented the
-  approach underlying the DSLsofMath course even before the first course instance.
+For the last few years we have been working on the border between
+education and functional programming research under the common heading
+of ``Domain Specific Languages of Mathematics''
+(\href{https://github.com/DSLsofMath/}{DSLsofMath}).
 %
-  We were then encouraged to come back to present our experience and the student
-  results.
+This activity started from a desire to improve the mathematical
+education of computer scientists and the computer science education of
+mathematicians.
 %
-  Now, three years later, we have seen three groups of learners attend the course,
-  and the first two groups have also continued to the difficult courses in the
-  third year.
+In 2014 Ionescu and Jansson applied for a pedagogical project to
+develop a new BSc level course, and from 2016 on the course has been
+offered to students at Chalmers and University of Gothenburg.
+%
+
+At the workshop on Trends in Functional Programming in Education
+(TFPIE) in 2015 Ionescu and Jansson
+\cite{DBLP:journals/corr/IonescuJ16} presented the approach underlying
+the DSLsofMath course even before the first course instance.
+%
+We were then encouraged to come back to present our experience and the
+student results.
+%
+Now, three years later, we have seen three groups of learners attend
+the course, and the first two groups have also continued to the
+difficult courses in the third year.
 %*TODO: what is the best wording?: class / cohort / group / form ...
-\todo{more on current status (student counts, hints about results from LADOK)}
+%\todo{more on current status (student counts, hints about results from LADOK)}
+
+The course focus is on types \& specifications, syntax \& semantics,
+of domain specific languages used as tools for thinking.
+%
+In this paper we present three examples from the course material to
+set the scene, and we present an evaluation of the student results.
+
+The DSLsofMath activity has also lead to other developments not
+covered in this paper: presentations at TFPIE 2015, DSLDI 2015, IFIP
+WG 2.1, and two BSc thesis projects (one in 2016 about Transforms,
+Signals, and Systems \cite{JonssonTSLwithDLS2016} and one in 2018
+called ``Learn You a Physics'' --- see appendix
+\ref{app:LearnYouAPhysics}).
 
 \section{Types in Mathematics}
 
@@ -313,40 +315,6 @@ numerical approximations.
 %
 But if we also have access to the ``source code'' of |f|, then we can
 apply the usual rules we have learnt in calculus.
-%
-
-% We can write
-%
-% \savecolumns
-% \begin{spec}
-%   D f x  = lim 0 g        where            g  h = frac (f(x+h) - f x) h
-% \end{spec}
-%
-% TODO: add explanation for the next step
-%
-% \restorecolumns
-% \begin{spec}
-%   D f x  = lim 0 (phi x)  where       phi  x  h = frac (f(x+h) - f x) h
-% \end{spec}
-%
-% TODO: add explanation for the next step
-%
-% \restorecolumns
-% \begin{spec}
-%   D f    = lim 0 . psi f  where  psi  f    x  h = frac (f(x+h) - f x) h
-% \end{spec}
-
-
-% Note: we cannot \emph{implement} |D| of this type in Haskell.
-% %
-%
-% Given only |f : REAL -> REAL| as a ``black box'' we
-% cannot compute the actual derivative |f' : REAL -> REAL|.
-%
-% We need the ``source code'' of |f| to apply rules from calculus.
-%
-
-
 
 \section{Type inference and understanding: Lagrangian case study}
 \label{sec:Lagrangian}
@@ -652,8 +620,14 @@ therefore looking for more support and new methods for studying maths.
 
 
 \subsection{Students' assessment of the course}
-\todo[inline]{Discuss results of Student evaluations or other indications of students'
-  opinions on the course}
+
+Each course instance has been evaluated with a standard questionnaire sent to all participants as part of the university wide course evaluation process.
+%
+The evaluation of the first instance, with Cezar Ionescu as lecturer, identified a need to restructure the initial four-lecture sequence, to re-order a few lectures and to replace the two guest lectures by Linear Algebra.
+%
+In preparation for the second instance, with Patrik Jansson as lecturer, the initial lecture sequence was changed to include more Haskell introduction and less formal logic, and two new lectures on Linear Algebra were developed.
+%
+\todo{Patrik: continue}
 
 \section{Related work}
 
