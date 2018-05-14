@@ -584,20 +584,20 @@ differential equation (a PDE).
 
 % Describe how the ``measurements'' were done and interpret the results.
 
-We considered student results for students from the D program at Chalmers
-\todo{briefly explain what the D program is} who
-started their studies in 2014 and 2015. In the spring of their second year at
+We considered student results for students from the CSE programme at Chalmers%
+\footnote{Computer Science and Engineering (CSE) is a five-year BSc+MSc programme at Chalmers. It is called ``Datateknik (D)'' in Swedish.}
+who started their studies in 2014 and 2015. In the spring of their second year at
 Chalmers (2016 and 2017), these students had the option of either taking the
 DSLsofMath course or the Concurrent Programming course.
 
 We considered only ``active'' students, that is, students who had signed up for
-at least half of the compulsory courses in the D program during the semesters
+at least half of the compulsory courses in the CSE programme during the semesters
 being considered (Fall 2014 - Fall 2017). This amounted to 145 students, where
 53 signed up for the DSLsofMath course (whereas 92 did not) and 34 of those 53
 passed the course.
 
 We had access to data on these students' results in all compulsory courses in
-the program as well as the more common elective courses.
+the programme as well as the more common elective courses.
 %
 At Chalmers students pass a course with a grade of 3, 4, or 5, with 5 being the
 highest grade, or fail the course with no specified grade. Students have many
@@ -624,15 +624,15 @@ struggle with, Transforms, signals and systems (SSY080) and Reglerteknik (ERE103
 \begin{table}[h]
   \centering
   \begin{tabular}{l*{3}{c}}
-                       & IN     & PASS    & OUT    \\
+                       & PASS    & IN     & OUT    \\
     \hline
-    SSY080 pass rate   & 56.6\% & 76.5\%  & 35.9\% \\
-    SSY080 mean grade  & 4.10   & 4.23    & 3.58   \\
-    ERE103 pass rate   & 45.3\% & 67.6\%  & 40.2\% \\ 
-    ERE103 mean grade  & 3.88   & 3.91    & 3.35   \\
-    
+    SSY080 pass rate   & 76.5\%  & 56.6\% & 35.9\% \\
+    SSY080 mean grade  & 4.23    & 4.10   & 3.58   \\
+    ERE103 pass rate   & 67.6\%  & 45.3\% & 40.2\% \\
+    ERE103 mean grade  & 3.91    & 3.88   & 3.35   \\
+
   \end{tabular}
-  \caption{Pass rate and mean grade in 3d year courses for students who took and
+  \caption{Pass rate and mean grade in third year courses for students who took and
   passed DSLsofMath and those who did not.}
 \end{table}
 \todo[inline]{Discuss results}
