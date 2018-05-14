@@ -620,9 +620,9 @@ or not they passed), and OUT is the students who did not sign up for DSLsofMath.
   \begin{tabular}{l*{3}{c}}
                        & PASS    & IN     & OUT    \\
     \hline
-    SSY080 pass rate   & 76.5\%  & 56.6\% & 35.9\% \\
+    SSY080 pass rate   & 77\%  & 57\% & 36\% \\
     SSY080 mean grade  & 4.23    & 4.10   & 3.58   \\
-    ERE103 pass rate   & 67.6\%  & 45.3\% & 40.2\% \\
+    ERE103 pass rate   & 68\%  & 45\% & 40\% \\
     ERE103 mean grade  & 3.91    & 3.88   & 3.35   \\
 
   \end{tabular}
