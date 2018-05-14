@@ -57,53 +57,59 @@
 \maketitle
 
 \begin{abstract}
-
-  \todo{PaJa: write!}
-
+  At the workshop on Trends in Functional Programming in Education (TFPIE) in 2015 Ionescu and Jansson presented the approach underlying the ``Domain Specific Languages of Mathematics'' (DSLsofMath) course even before the first course instance.
+  %
+  We were then encouraged to come back to present our experience and the student results.
+  %
+  Now, three years later, we have seen three groups of learners attend the course, and the first two groups have also continued to the difficult courses in the third year.
+  %
+  In this paper we present three examples from the course material to set the scene, and we present an evaluation of the student results showing improvements in the pass rates and grades on later courses.
 \end{abstract}
 
-\todo{PaJa: keywords}
+\paragraph{Keywords:} functional programming, computer science education, calculus, didactics, formalisation, correctness, Haskell, types, syntax, semantics, scope
 
 \section{Introduction}
 
-
-TODO: textify background and motivation: What is ``DSLs of Math''?
-
-  ``Domain Specific Languages of Mathematics''
-  \url{https://github.com/DSLsofMath/}
-
-  \begin{itemize}
-  \item A BSc-level course (2016-01 CeIo, 2017 onwards: PaJa, DaSc)
-
-
-
-  \item A pedagogical project to develop the course (DaHe, SoEi)
-
-  \item A BSc thesis project ``Learn You a Physics'' (see appendix
-     \ref{app:LearnYouAPhysics})
-
-  \end{itemize}
-
-  Aim: ``\ldots improve the mathematical education of computer
-  scientists and the computer science education of mathematicians.''
-
-  Focus on types \& specifications, syntax \& semantics
-
-  DSL examples: Power series, Differential equations, Linear Algebra
-
-
-  At the workshop on Trends in Functional Programming in Education (TFPIE) in
-  2015 Ionescu and Jansson \cite{DBLP:journals/corr/IonescuJ16} presented the
-  approach underlying the DSLsofMath course even before the first course instance.
+For the last few years we have been working on the border between
+education and functional programming research under the common heading
+of ``Domain Specific Languages of Mathematics''
+(\href{https://github.com/DSLsofMath/}{DSLsofMath}).
 %
-  We were then encouraged to come back to present our experience and the student
-  results.
+This activity started from a desire to improve the mathematical
+education of computer scientists and the computer science education of
+mathematicians.
 %
-  Now, three years later, we have seen three groups of learners attend the course,
-  and the first two groups have also continued to the difficult courses in the
-  third year.
+In 2014 Ionescu and Jansson applied for a pedagogical project to
+develop a new BSc level course, and from 2016 on the course has been
+offered to students at Chalmers and University of Gothenburg.
+%
+
+At the workshop on Trends in Functional Programming in Education
+(TFPIE) in 2015 Ionescu and Jansson
+\cite{DBLP:journals/corr/IonescuJ16} presented the approach underlying
+the DSLsofMath course even before the first course instance.
+%
+We were then encouraged to come back to present our experience and the
+student results.
+%
+Now, three years later, we have seen three groups of learners attend
+the course, and the first two groups have also continued to the
+difficult courses in the third year.
 %*TODO: what is the best wording?: class / cohort / group / form ...
-\todo{more on current status (student counts, hints about results from LADOK)}
+%\todo{more on current status (student counts, hints about results from LADOK)}
+
+The course focus is on types \& specifications, syntax \& semantics,
+of domain specific languages used as tools for thinking.
+%
+In this paper we present three examples from the course material to
+set the scene, and we present an evaluation of the student results.
+
+The DSLsofMath activity has also lead to other developments not
+covered in this paper: presentations at TFPIE 2015, DSLDI 2015, IFIP
+WG 2.1, and two BSc thesis projects (one in 2016 about Transforms,
+Signals, and Systems \cite{JonssonTSLwithDLS2016} and one in 2018
+called ``Learn You a Physics'' --- see appendix
+\ref{app:LearnYouAPhysics}).
 
 \section{Types in Mathematics}
 
@@ -313,40 +319,6 @@ numerical approximations.
 %
 But if we also have access to the ``source code'' of |f|, then we can
 apply the usual rules we have learnt in calculus.
-%
-
-% We can write
-%
-% \savecolumns
-% \begin{spec}
-%   D f x  = lim 0 g        where            g  h = frac (f(x+h) - f x) h
-% \end{spec}
-%
-% TODO: add explanation for the next step
-%
-% \restorecolumns
-% \begin{spec}
-%   D f x  = lim 0 (phi x)  where       phi  x  h = frac (f(x+h) - f x) h
-% \end{spec}
-%
-% TODO: add explanation for the next step
-%
-% \restorecolumns
-% \begin{spec}
-%   D f    = lim 0 . psi f  where  psi  f    x  h = frac (f(x+h) - f x) h
-% \end{spec}
-
-
-% Note: we cannot \emph{implement} |D| of this type in Haskell.
-% %
-%
-% Given only |f : REAL -> REAL| as a ``black box'' we
-% cannot compute the actual derivative |f' : REAL -> REAL|.
-%
-% We need the ``source code'' of |f| to apply rules from calculus.
-%
-
-
 
 \section{Type inference and understanding: Lagrangian case study}
 \label{sec:Lagrangian}
@@ -657,49 +629,75 @@ therefore looking for more support and new methods for studying maths.
 \todo[inline]{Combine this section with the one above}
 
 
-\subsection{Students' assessment of the course}
-% Discuss results of Student evaluations or other indications of students' opinions of the course
-Each of the three instances of the course was followed by a course survey which
-all students had the option of participating in, and a course evaluation meeting
-in which student representatives from the course discussed the survey results
-and shared their impressions of the course with the teacher.
+\subsection{Students' course assessment and resulting changes}
 
-% What were they happy with, unhappy, what have we tried to improve in response
-% to these outcomes?
+Each course instance has been evaluated with a standard questionnaire sent to all participants as part of the university wide course evaluation process.
+%
+The evaluation of the first instance, with Cezar Ionescu as lecturer, identified a need to restructure the initial four-lecture sequence, to re-order a few lectures and to replace the two guest lectures by Linear Algebra.
+%
+
+In preparation for the second instance, with Patrik Jansson as lecturer, the initial lecture sequence was changed to include more Haskell introduction and less formal logic, and two new lectures on Linear Algebra were developed.
+%
+In the evaluation of the second (2017) instance, the students requested more lecture notes and more weekly exercises to make it easier to get started.
+%
+The evaluation also indicated that the average student had spent too few hours on the course, and the exam results suffered (42\% failed, up from 32\% in 2016).
+
+At this point we decided to push for course material development and one of the student evaluators from 2017 (Daniel Heurlin) was hired part time to help out with these improvements.
+%
+Patrik spent the autumn of 2017 on converting raw text notes and photos of blackboards to LaTeX-based literate Haskell lecture notes covering the full course and Daniel developed more exercises to solve.
+%
+The primary focus was on complementing the exam questions from earlier years with easier exercises to start each week with and with more material on functional programming in Haskell.
+
+The recent evaluation of the 2018 instance was overall positive and the course saw a strong improvement in the pass rate: only 11\% failed.
+%
+The student evaluators suggested to ``increase the pressure'' on solving the exercises, to make the students better prepared for the hand-in assignments and the written exam.
 
 \section{Related work}
 
 \todo[inline]{Flesh out this section}
 
 \begin{itemize}
-\item Work on using functional programming to help teach mathematics to younger
-students:
-Bootstrap \cite{Schanzer:2018:ABA:3159450.3159498,Schanzer:2015:TSS:2676723.2677238,WrigRichLee2013oz}
-and others i.e. \cite{EPTCS270.2}
+\item Work on using functional programming to help teach mathematics to younger students: Bootstrap \cite{Schanzer:2018:ABA:3159450.3159498,Schanzer:2015:TSS:2676723.2677238,WrigRichLee2013oz} and others i.e. \cite{EPTCS270.2}
 \item Using Haskell to teach physics \cite{DBLP:journals/corr/Walck16} \cite{DBLP:journals/corr/Walck14}
-
-\item This paper presents some work on using FP to introduce more precision to
-  mathematical notation for university students: \cite{EPTCS106.3}
+\item This paper presents some work on using FP to introduce more precision to mathematical notation for university students: \cite{EPTCS106.3}
 \end{itemize}
 
 
 
 \section{Conclusions and future work}
 
-\paragraph{DSLsofMath: Typing Mathematics}
+During the last four years we have developed course material and worked with 150+ computer science students to improve their mathematical education throught the course ``Domain Specific Languages of Mathematics''.
+%
+We have shown how mathematical concepts like |lim|, |D|, |Lagrangian| can be explored and explained using typed functional programming.
+% TODO perhaps include for the full paper Sometimes new insights arise: Stream calculus, for example.
+%
+(Much more about that can be read in the lecture notes \cite{JanssonIonescuDSLsofMathCourse}.)
+%
+We have investigated the group of students who picked DSLsofMath as an elective and we have measured positive results on later courses with mathematical content.
+\todo[inline]{TODO[Solrun] perhaps add more ``meat'' about the student results}
 
-  \begin{itemize}
-  \item Mathematical concepts like |lim|, |D|, |Lagrangian| can be
-    explored and explained using typed functional programming.
-  \item Sometimes new insights arise: Stream calculus, for example.
-  \item Aim: ``\ldots improve the mathematical education of computer
-    scientists and the computer science education of mathematicians.''
-  \item Focus on types \& specifications, syntax \& semantics
-  \item DSL examples: Power series, Differential equations, Linear
-    Algebra
-  \end{itemize}
+There are several avenues for future work: upstream and downstream curriculum changes, better tool support, and empirical evaluation.
+%
+\begin{itemize}
+\item Upstream, we would really like to work with the teachers of the mathematics courses in the first year to see if some of the ideas from DSLsofMath could be included already at that stage.
+  %
+  Ideally, in the long term, the DSLsofMath course material should be ``absorbed'' by these earlier courses.
+\item Downstream, it would be interesting to see how the new course could affect the way the ``Transforms, signals and systems'' and ``Automatic control'' courses are taught.
+  %
+  It seems that we may also affect the Physics course -- see the BSc project ``Learn You a Physics'' summary in appendix \ref{app:LearnYouAPhysics}.
+\item When it comes to tool support it would be interesting to see how systems like Liquid Haskell, Agda, etc.\ could help the students learn.
+  %
+  We have been cautious so far, taking it one step at a time, to avoid stressing the student by yet another language / system / tool to learn.
+\item Finally, we are well aware that our evaluation of the effect of the course on the students' learning is lacking the rigour of a proper empirical study.
+  %
+  It would be interesting to work with experts on teaching and learning in higher education on such a study.
 
-\todo[inline]{TODO[Solrun] add summary of the student results as well}
+
+\end{itemize}
+
+
+
+
 
 \subsection*{Acknowledgments}
 
@@ -763,8 +761,6 @@ The text is written in such a way as to be as non-frightening as possible, and t
 Inspiration is taken from \href{http://learnyouahaskell.com/}{Learn You a Haskell for Great Good} and the project \href{https://github.com/DSLsofMath/DSLsofMath}{DSLsofMath} at Chalmers and University of Gothenburg.
 %
 The \href{https://github.com/DSLsofMath/BScProj2018/tree/master/Physics}{source code} and \href{https://dslsofmath.github.io/BScProj2018/}{learning material} is freely available online.
-
-
 
 \bibliographystyle{../eptcsstyle/eptcs}
 \bibliography{dslm}
