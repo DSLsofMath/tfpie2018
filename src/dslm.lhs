@@ -621,7 +621,20 @@ Our hypothesis was that taking our course would help prepare the students for
 the math-instensive compulsory courses in the third year which many students
 struggle with, Transforms, signals and systems (SSY080) and Reglerteknik (ERE103).
 
-\todo[inline]{Table with results of in/out group in those courses}
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l*{3}{c}}
+                       & IN     & PASS    & OUT    \\
+    \hline
+    SSY080 pass rate   & 56.6\% & 76.5\%  & 35.9\% \\
+    SSY080 mean grade  & 4.10   & 4.23    & 3.58   \\
+    ERE103 pass rate   & 45.3\% & 67.6\%  & 40.2\% \\ 
+    ERE103 mean grade  & 3.88   & 3.91    & 3.35   \\
+    
+  \end{tabular}
+  \caption{Pass rate and mean grade in 3d year courses for students who took and
+  passed DSLsofMath and those who did not.}
+\end{table}
 \todo[inline]{Discuss results}
 \todo{Compare groups with p-values?}
 
