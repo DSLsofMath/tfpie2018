@@ -618,12 +618,12 @@ or not they passed), and OUT is the students who did not sign up for DSLsofMath.
 \begin{table}[h]
   \centering
   \begin{tabular}{l*{3}{c}}
-                       & PASS    & IN     & OUT    \\
+                       & PASS  & IN   & OUT  \\
     \hline
     SSY080 pass rate   & 77\%  & 57\% & 36\% \\
-    SSY080 mean grade  & 4.23    & 4.10   & 3.58   \\
+    SSY080 mean grade  & 4.23  & 4.10 & 3.58 \\
     ERE103 pass rate   & 68\%  & 45\% & 40\% \\
-    ERE103 mean grade  & 3.91    & 3.88   & 3.35   \\
+    ERE103 mean grade  & 3.91  & 3.88 & 3.35 \\
 
   \end{tabular}
   \caption{Pass rate and mean grade in third year courses for students who took and
@@ -633,6 +633,12 @@ or not they passed), and OUT is the students who did not sign up for DSLsofMath.
 As we can see, the students who took DSLsofMath had higher mean grades in the
 third-year courses and were more likely to pass, in particular those who managed
 to pass the DSLsofMath course.
+
+The correlation between taking, and especially passing, DSLsofMath and
+success in the third year courses is clear. But perhaps the students who chose
+to take our course did so because they enjoyed mathematics, and were already
+more likely to succeed in the subsequent math-heavy courses regardless of
+whether they took our course.
 
 \subsubsection{Characterizing students who chose DSLsofMath}
 We were curious to see how we could characterize the students who sign up for
@@ -651,8 +657,14 @@ therefore looking for more support and new methods for studying maths.
 
 
 \subsection{Students' assessment of the course}
-\todo[inline]{Discuss results of Student evaluations or other indications of students'
-  opinions on the course}
+% Discuss results of Student evaluations or other indications of students' opinions of the course
+Each of the three instances of the course was followed by a course survey which
+all students had the option of participating in, and a course evaluation meeting
+in which student representatives from the course discussed the survey results
+and shared their impressions of the course with the teacher.
+
+% What were they happy with, unhappy, what have we tried to improve in response
+% to these outcomes?
 
 \section{Related work}
 
