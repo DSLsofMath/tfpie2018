@@ -58,10 +58,11 @@
 
 \begin{abstract}
 
-  TODO
+  \todo{PaJa: write!}
 
 \end{abstract}
 
+\todo{PaJa: keywords}
 
 \section{Introduction}
 
