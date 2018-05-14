@@ -1,0 +1,7 @@
+functional programming
+computer science education
+calculus
+didactics
+Haskell
+formalisation
+correctness
