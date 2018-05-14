@@ -654,15 +654,22 @@ The student evaluators suggested to ``increase the pressure'' on solving the exe
 
 \section{Related work}
 
-\todo[inline]{Flesh out this section}
+Others have worked on using functional programming to help teach mathematics, in
+particular algebra, to younger (primary and secondary school) students.
+%
+The Bootstrap project has
+successfully developed a functional programming-based curriculum that has
+improved students' performance in solving algebra
+problems~\cite{Schanzer:2018:ABA:3159450.3159498,Schanzer:2015:TSS:2676723.2677238}.
+In \cite{EPTCS270.2}, d'Alves et al. describe using functional programming in
+Elm to introduce algebraic thinking to students.
 
-\begin{itemize}
-\item Work on using functional programming to help teach mathematics to younger students: Bootstrap \cite{Schanzer:2018:ABA:3159450.3159498,Schanzer:2015:TSS:2676723.2677238,WrigRichLee2013oz} and others i.e. \cite{EPTCS270.2}
-\item Using Haskell to teach physics \cite{DBLP:journals/corr/Walck16} \cite{DBLP:journals/corr/Walck14}
-\item This paper presents some work on using FP to introduce more precision to mathematical notation for university students: \cite{EPTCS106.3}
-\end{itemize}
-
-
+In \cite{DBLP:journals/corr/Walck16} and \cite{DBLP:journals/corr/Walck14},
+Walck describes using Haskell programming to deepen university students'
+understanding of physics, and in \cite{EPTCS106.3} Ragde describes using
+functional programming to introduce university students to more precise mathematical notation.
+We are not aware of previous literature on the use of functional programming to
+present mathematical analysis as we have done.
 
 \section{Conclusions and future work}
 
