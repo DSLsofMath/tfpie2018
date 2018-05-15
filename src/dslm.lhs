@@ -531,7 +531,7 @@ But we already typed it as |(T, Q, V) → ℝ|, contradiction!
     Lagrange(L, w) =  {-"\qquad"-} D (D₃ L ∘ expand w) == D₂ L ∘ expand w
   \end{spec}
   %
-  where we use |(==)| to avoid confusion with the equlity sign (|=|)
+  where we use |(==)| to avoid confusion with the equality sign (|=|)
   used for the definition of the predicate.
 \end{enumerate}
 
@@ -580,7 +580,7 @@ attempt to obtain a passing score or improve their grade in the course.
 
 \subsection{Results in third year courses}
 Our hypothesis was that taking our course would help prepare the students for
-the math-instensive compulsory courses in the third year which many students
+the math-intensive compulsory courses in the third year which many students
 struggle with, Transforms, signals and systems (SSY080) and Reglerteknik (ERE103).
 
 In the following table we see the pass rate and the mean grade (of those who
@@ -679,7 +679,7 @@ The Bootstrap project has
 successfully developed a functional programming-based curriculum that has
 improved students' performance in solving algebra
 problems~\cite{Schanzer:2018:ABA:3159450.3159498,Schanzer:2015:TSS:2676723.2677238}.
-In \cite{EPTCS270.2}, d'Alves et al. describe using functional programming in
+In \cite{EPTCS270.2}, d'Alves et al.\ describe using functional programming in
 Elm to introduce algebraic thinking to students.
 
 In \cite{DBLP:journals/corr/Walck16} and \cite{DBLP:journals/corr/Walck14},
@@ -691,7 +691,7 @@ present mathematical analysis as we have done.
 
 \section{Conclusions and future work}
 
-During the last four years we have developed course material and worked with 150+ computer science students to improve their mathematical education throught the course ``Domain Specific Languages of Mathematics''.
+During the last four years we have developed course material and worked with 150+ computer science students to improve their mathematical education through the course ``Domain Specific Languages of Mathematics''.
 %
 We have shown how mathematical concepts like |lim|, |D|, |Lagrangian| can be explored and explained using typed functional programming.
 % TODO perhaps include for the full paper Sometimes new insights arise: Stream calculus, for example.
@@ -724,7 +724,7 @@ There are several avenues for future work: upstream and downstream curriculum ch
 
 
 
-\subsection*{Acknowledgments}
+\subsection*{Acknowledgements}
 
 The support from Chalmers Quality Funding 2015 (Dnr C 2014-1712, based
 on Swedish Higher Education Authority evaluation results) is
@@ -779,7 +779,7 @@ The online learning material \href{https://dslsofmath.github.io/BScProj2018/}{``
 %
 It does this by identifying key areas in physics with a well defined scope, for example dimensional analysis or single particle mechanics, and develops a domain specific language around each of these areas.
 %
-The implementation of these DSL's are the meat of the learning material with accompanying text to explain every step and how it relates to the physics of that specific area.
+The implementation of these DSLs are the meat of the learning material with accompanying text to explain every step and how it relates to the physics of that specific area.
 %
 The text is written in such a way as to be as non-frightening as possible, and to only require a beginner knowledge in Haskell.
 %
