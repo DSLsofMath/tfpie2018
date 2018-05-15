@@ -627,7 +627,7 @@ in students' performance in the compulsory mathematics and physics courses.
 \begin{table}[h]
   \centering
   \begin{tabular}{l*{3}{c}}
-                                      & PASS  & IN   & OUT  \\
+                                     & PASS  & IN   & OUT  \\
     \hline
     Pass rate for first 3 semesters  & 97\%  & 92\% & 86\% \\
     Mean grade for first 3 semesters & 3.95  & 3.81 & 3.50 \\
@@ -639,12 +639,17 @@ in students' performance in the compulsory mathematics and physics courses.
     taking) DSLsofMath.}
 \end{table}
 
-
-%\subsubsection{Significance of taking DSLsofMath}
-\todo[inline]{Discuss these results}
-
-\todo[inline]{Is taking DSLM a significant factor in improving future results or were the
-  students just better to begin with?}
+Here we can see that there seems to be a small positive bias: those
+students who choose the DSLsofMath course (the IN group) were a bit
+more successful in the first three semesters than those in the OUT
+group.
+%
+And (not surprisingly) those who pass the course fare even better, on
+average.
+%
+Given that many other factors also vary it is not easy to prove that
+taking DSLsofMath is a significant factor in improving future results,
+but it does seem likely.
 
 
 \subsection{Students' course assessment and resulting changes}
@@ -699,7 +704,7 @@ We have shown how mathematical concepts like |lim|, |D|, |Lagrangian| can be exp
 (Much more about that can be read in the lecture notes \cite{JanssonIonescuDSLsofMathCourse}.)
 %
 We have investigated the group of students who picked DSLsofMath as an elective and we have measured positive results on later courses with mathematical content.
-\todo[inline]{TODO[Solrun] perhaps add more ``meat'' about the student results}
+%\todo[inline]{TODO[Solrun] perhaps add more ``meat'' about the student results}
 
 There are several avenues for future work: upstream and downstream curriculum changes, better tool support, and empirical evaluation.
 %
