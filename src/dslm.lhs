@@ -115,7 +115,9 @@ In this paper we present three examples from the course material to
 set the scene, and we present an evaluation of the student results.
 
 The DSLsofMath activity has also lead to other developments not
-covered in this paper: presentations at TFPIE 2015, DSLDI 2015, IFIP
+covered in this paper: presentations at TFPIE 2015,
+The Third Workshop on Domain Specific Languages Design and Implementation (DSLDI
+2015), IFIP
 WG 2.1, and two BSc thesis projects (one in 2016 about Transforms,
 Signals, and Systems \cite{JonssonTSLwithDLS2016} and one in 2018
 called ``Learn You a Physics'' --- see appendix
@@ -133,8 +135,8 @@ smaller and, in the next section, one larger examples from the lecture notes.
 %
 The two smaller examples are limits and derivatives.
 
-In many chapters we start from a text book definition and ``tease it
-apart'' to a identify parameters, types, and to help the students
+In many of the chapters we start from a text book definition and ``tease it
+apart'' to identify parameters, types, and to help the students
 understand exactly what it means.
 %
 When we first presented the course
