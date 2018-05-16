@@ -5,7 +5,7 @@
 % by the next update of agda.fmt
 \def\textmu{}
 
-\usepackage{amsmath}
+\usepackage[fleqn]{amsmath}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8x]{inputenc}
 \RequirePackage{ucs}
@@ -122,6 +122,9 @@ WG 2.1, and two BSc thesis projects (one in 2016 about Transforms,
 Signals, and Systems \cite{JonssonTSLwithDLS2016} and one in 2018
 called ``Learn You a Physics'' --- see appendix
 \ref{app:LearnYouAPhysics}).
+
+%TODO: expand IFIP WG 2.1 to "IFIP Working Group 2.1 on Algorithmic Languages and Calculi"
+% 2015 http://www.cse.chalmers.se/~patrikj/talks/WG2.1_Goteborg_Jansson_Ionescu_DSLsofMath.pdf
 
 \section{Types in Mathematics}
 
