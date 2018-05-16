@@ -592,7 +592,8 @@ attempt to obtain a passing score or improve their grade in the course.
 \subsection{Results in third year courses}
 Our hypothesis was that taking our course would help prepare the students for
 the math-intensive compulsory courses in the third year which many students
-struggle with, Transforms, signals and systems (SSY080) and Reglerteknik (ERE103).
+struggle with, Transforms, signals and systems (SSY080 Transformer, signaler och
+system) and Control theory (ERE103 Reglerteknik).
 
 In the following table we see the pass rate and the mean grade (of those who
 passed) for the above mentioned courses, where PASS represents the students who
