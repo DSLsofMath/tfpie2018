@@ -656,24 +656,8 @@ math-heavy courses regardless of whether they took our course.
 We looked at the students' results from their first three semesters at Chalmers,
 prior to having the option of taking DSLsofMath. We were particularly interested
 in students' performance in the compulsory mathematics and physics courses
-\footnote{
-  The courses used to calculate the first 3 semesters pass rate and mean grade
-  were
-  TDA555 Introduktion till funktionell programmering,
-  TMV210 Inledande diskret matematik,
-  EDA452 Grundläggande datorteknik,
-  TMV216 Linjär algebra,
-  DAT043 Objektorienterad programmering,
-  TMV170 Matematisk analys,
-  EDA343 Datakommunikation,
-  EDA481 	Maskinorienterad programmering,
-  DAT290 	Datatekniskt projekt,
-  MVE055 Matematisk statistik och diskret matematik,
-  DAT037 Datastrukturer,
-  and TIF085 Fysik för ingenjörer
-  . Of these, the ones used to calculate the Math/physics pass rate and mean
-  grade were TMV210,  TMV216, TMV170, MVE055 and TIF085.
-}.
+\footnote{For details see appendix \ref{app:coursecodes}.}.
+%
 \begin{table}[h]
   \centering
   \begin{tabular}{l*{3}{c}}
@@ -889,6 +873,33 @@ University of Gothenburg.
 The \href{https://github.com/DSLsofMath/BScProj2018/tree/master/Physics}{source
   code} and \href{https://dslsofmath.github.io/BScProj2018/}{learning material}
 is freely available online.
+
+\section{Course codes}
+\label{app:coursecodes}
+
+The courses used to calculate the first 3 semesters pass rate and mean
+grade were:
+
+\begin{tabular}{ll}
+    TDA555 & Introduktion till funktionell programmering
+\\  TMV210 & Inledande diskret matematik
+\\  EDA452 & Grundläggande datorteknik
+\\  TMV216 & Linjär algebra
+\\  DAT043 & Objektorienterad programmering
+\\  TMV170 & Matematisk analys
+\\  EDA343 & Datakommunikation
+\\  EDA481 & Maskinorienterad programmering
+\\  DAT290 & Datatekniskt projekt
+\\  MVE055 & Matematisk statistik och diskret matematik
+\\  DAT037 & Datastrukturer
+\\  TIF085 & Fysik för ingenjörer.
+\end{tabular}
+
+Of these, the ones used to calculate the Math/physics pass rate and
+mean grade were TMV210, TMV216, TMV170, MVE055 and TIF085.
+
+
+
 
 \bibliographystyle{../eptcsstyle/eptcs}
 \bibliography{dslm}
