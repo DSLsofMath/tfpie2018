@@ -66,7 +66,7 @@
   results.
   %
   Now, three years later, we have seen three groups of learners attend the
-  course, and the first two groups have also continued on to the challenging
+  course, and the first two groups have also continued on to take challenging
   courses in the subsequent year.
   %
   In this paper we present three examples from the course material to set the
@@ -103,8 +103,8 @@ We were then encouraged to come back to present our experience and the
 student results.
 %
 Now, three years later, we have seen three groups of learners attend
-the course, and the first two groups have also continued on to the
-mathematically challenging courses in their third year.
+the course, and the first two groups have also continued on to take
+mathematically challenging compulsory courses in the subsequent year.
 %*TODO: what is the best wording?: class / cohort / group / form ...
 %\todo{more on current status (student counts, hints about results from LADOK)}
 
