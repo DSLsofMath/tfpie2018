@@ -601,7 +601,7 @@ opportunities to retake exams from courses they took in past semesters, to
 attempt to obtain a passing score or improve their grade in the course.
 
 
-\subsection{Student results before and after DSLsofMath}
+\subsection{Student results before and after taking DSLsofMath}
 Our hope was that taking our course would help prepare the students for
 the math-intensive compulsory courses in the subsequent year which many students
 struggle with, Transforms, signals and systems (TSS)
@@ -672,7 +672,7 @@ in students' performance in the compulsory mathematics and physics courses
 \begin{table}[h]                                
   \centering                                    
   \begin{tabular}{l*{3}{c}}                     
-                                     & PASS  & ITIF085N   & OUT  \\
+                                     & PASS  & IN   & OUT  \\
     \hline
     Pass rate for first 3 semesters  & 97\%  & 92\% & 86\% \\
     Mean grade for first 3 semesters & 3.95  & 3.81 & 3.50 \\
@@ -700,7 +700,7 @@ but it does seem likely.
 \subsection{Students' course assessment and resulting changes}
 
 Each course instance has been evaluated with a standard questionnaire sent to
-all participants as part of the university wide course evaluation process.
+all participants as part of the university-wide course evaluation process.
 %
 The evaluation of the first instance, with Cezar Ionescu as lecturer, identified
 a need to restructure the initial four-lecture sequence, to re-order a few
@@ -762,8 +762,8 @@ During the last four years we have developed course material and worked with
 150+ computer science students to improve their mathematical education through
 the course ``Domain Specific Languages of Mathematics''.
 %
-We have shown how mathematical concepts like |lim|, |D|, |Lagrangian| can be
-explored and explained using typed functional programming.
+We have shown how mathematical concepts like limits, derivatives and Lagrangian
+equations can be explored and explained using typed functional programming.
 % TODO perhaps include for the full paper Sometimes new insights arise: Stream calculus, for example.
 %
 (Much more about that can be read in the lecture notes
