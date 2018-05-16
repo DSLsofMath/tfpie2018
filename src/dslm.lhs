@@ -878,11 +878,10 @@ is freely available online.
 \section{Course codes}
 \label{app:coursecodes}
 
-The courses used to calculate the first 3 semesters pass rate and mean
-grade were:
 
 \begin{tabular}{lll}
-    TDA555 &   & Introduktion till funktionell programmering
+    Course code & & Name
+\\  TDA555 &   & Introduktion till funktionell programmering
 \\  TMV210 & M & Inledande diskret matematik
 \\  EDA452 &   & Grundläggande datorteknik
 \\  TMV216 & M & Linjär algebra
@@ -893,8 +892,14 @@ grade were:
 \\  DAT290 &   & Datatekniskt projekt
 \\  MVE055 & M & Matematisk statistik och diskret matematik
 \\  DAT037 &   & Datastrukturer
-\\  TIF085 & F & Fysik för ingenjörer.
+\\  TIF085 & F & Fysik för ingenjörer
+\\\hline DAT326 & * & Matematikens domänspecifika språk
+\\\hline  SSY080 &   & Transformer, signaler och system
+\\  ERE103 &   & Reglerteknik
 \end{tabular}
+
+The courses used to calculate the first 3 semesters pass rate and mean
+grade are the ones listed above DSLsofMath (DAT326) in the table.
 %
 Of these, the ones used to calculate the Math/physics pass rate and
 mean grade were TMV210, TMV216, TMV170, MVE055 and TIF085.
