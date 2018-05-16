@@ -272,7 +272,7 @@ Thus, the operation which maps |f| to |f'| has type \linebreak |(X->REAL) ->
 Unfortunately, the only notation for this operation given (implicitly)
 in the definition is a postfix prime.
 %
-To make it easier to see we we use a prefix |D| instead and we can
+To make it easier to see we use a prefix |D| instead and we can
 thus write |D : (X->REAL) -> (Y->REAL)|.
 %
 We will often assume that |X = Y| so that we can can see |D| as
@@ -389,7 +389,7 @@ So, if we let ``coordinates'' be just one coordinate, we can take |i =
 \end{spec}
 %
 The ``system state'' here is a triple (of type |S = (T, Q, V) = ℝ³|)
-and we can call the the three components |t : T| for time, |q : Q| for
+and we can call the three components |t : T| for time, |q : Q| for
 coordinate, and |v : V| for velocity.
 %
 (We use |T = Q = V = ℝ| in this example but it can help the reading to
