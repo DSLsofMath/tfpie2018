@@ -108,22 +108,21 @@ mathematically challenging courses in their third year.
 %*TODO: what is the best wording?: class / cohort / group / form ...
 %\todo{more on current status (student counts, hints about results from LADOK)}
 
-The course focus is on types and specifications and the syntax and semantics
+The course focus is on types and specifications and on the syntax and semantics
 of domain specific languages used as tools for thinking.
 %
 In this paper we present three examples from the course material to
 set the scene, and we present an evaluation of the student results.
 
 The DSLsofMath activity has also lead to other developments not
-covered in this paper: presentations at TFPIE 2015,
-The Third Workshop on Domain Specific Languages Design and Implementation (DSLDI
-2015), IFIP Working Group 2.1 on Algorithmic Languages and Calculi 2015, and two
-BSc thesis projects (one in 2016 about Transforms,
-Signals, and Systems \cite{JonssonTSLwithDLS2016} and one in 2018
-called ``Learn You a Physics'' --- see appendix
-\ref{app:LearnYouAPhysics}).
+covered in this paper: presentations at TFPIE 2015, the Workshop on
+Domain Specific Languages Design and Implementation (DSLDI 2015), IFIP
+Working Group 2.1 on Algorithmic Languages and Calculi meeting in 2015, and two
+BSc thesis projects (one in 2016 about Transforms, Signals, and
+Systems \cite{JonssonTSLwithDLS2016} and one in 2018 called ``Learn
+You a Physics'' --- see appendix \ref{app:LearnYouAPhysics}).
 
-% http://www.cse.chalmers.se/~patrikj/talks/WG2.1_Goteborg_Jansson_Ionescu_DSLsofMath.pdf
+% WG2.1: 2015 http://www.cse.chalmers.se/~patrikj/talks/WG2.1_Goteborg_Jansson_Ionescu_DSLsofMath.pdf
 
 \section{Static checking: Scope and Types in Mathematics}
 
@@ -137,7 +136,14 @@ smaller and, in the next section, one larger examples from the lecture notes.
 %
 The two smaller examples are limits and derivatives.
 
-In many of the chapters we start from a text book definition and ``tease it
+% In several places the book contains an indented quote of a definition
+% or paragraph from a mathematical textbook, followed by detailed
+% analysis of that quote.
+% %
+% The aim is to improve the reader's skills in understanding, modelling,
+% and implementing mathematical text.
+
+In many of the chapters we start from a textbook definition and ``tease it
 apart'' to identify parameters, types, and to help the students
 understand exactly what it means.
 %
@@ -259,7 +265,7 @@ and |X included REAL| (or, equivalently, |X : PS REAL|).
 If we denote with |Y| the subset of |X| for which |f| is
 differentiable we get |f' : Y -> REAL|.
 %
-Thus, the operation which maps |f| to |f'| has type |(X->REAL) ->
+Thus, the operation which maps |f| to |f'| has type \linebreak |(X->REAL) ->
 (Y->REAL)|.
 %
 Unfortunately, the only notation for this operation given (implicitly)
@@ -361,6 +367,7 @@ What could this expression possibly mean?
 
 \end{quote}
 
+\noindent
 To start answering the question, we start typing the elements involved:
 
 \begin{enumerate}
