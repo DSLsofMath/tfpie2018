@@ -819,6 +819,7 @@ and innovation programme.
 \appendix
 
 \section{DSLsofMath learning outcomes}
+\label{app:learningoutcomes}
 
 \begin{itemize}
 \item Knowledge and understanding
@@ -880,23 +881,27 @@ is freely available online.
 The courses used to calculate the first 3 semesters pass rate and mean
 grade were:
 
-\begin{tabular}{ll}
-    TDA555 & Introduktion till funktionell programmering
-\\  TMV210 & Inledande diskret matematik
-\\  EDA452 & Grundläggande datorteknik
-\\  TMV216 & Linjär algebra
-\\  DAT043 & Objektorienterad programmering
-\\  TMV170 & Matematisk analys
-\\  EDA343 & Datakommunikation
-\\  EDA481 & Maskinorienterad programmering
-\\  DAT290 & Datatekniskt projekt
-\\  MVE055 & Matematisk statistik och diskret matematik
-\\  DAT037 & Datastrukturer
-\\  TIF085 & Fysik för ingenjörer.
+\begin{tabular}{lll}
+    TDA555 &   & Introduktion till funktionell programmering
+\\  TMV210 & M & Inledande diskret matematik
+\\  EDA452 &   & Grundläggande datorteknik
+\\  TMV216 & M & Linjär algebra
+\\  DAT043 &   & Objektorienterad programmering
+\\  TMV170 & M & Matematisk analys
+\\  EDA343 &   & Datakommunikation
+\\  EDA481 &   & Maskinorienterad programmering
+\\  DAT290 &   & Datatekniskt projekt
+\\  MVE055 & M & Matematisk statistik och diskret matematik
+\\  DAT037 &   & Datastrukturer
+\\  TIF085 & F & Fysik för ingenjörer.
 \end{tabular}
-
+%
 Of these, the ones used to calculate the Math/physics pass rate and
 mean grade were TMV210, TMV216, TMV170, MVE055 and TIF085.
+
+
+% SSY080 Transformer, signaler och system  % https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=28314&parsergrp=3
+% ERE103 Reglerteknik                      % https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=24149&parsergrp=3
 
 
 
