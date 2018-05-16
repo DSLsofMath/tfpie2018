@@ -66,7 +66,7 @@
   results.
   %
   Now, three years later, we have seen three groups of learners attend the
-  course, and the first two groups have also continued on to the challenging
+  course, and the first two groups have also continued on to take challenging
   courses in the subsequent year.
   %
   In this paper we present three examples from the course material to set the
@@ -103,8 +103,8 @@ We were then encouraged to come back to present our experience and the
 student results.
 %
 Now, three years later, we have seen three groups of learners attend
-the course, and the first two groups have also continued on to the
-mathematically challenging courses in their third year.
+the course, and the first two groups have also continued on to take
+mathematically challenging compulsory courses in the subsequent year.
 %*TODO: what is the best wording?: class / cohort / group / form ...
 %\todo{more on current status (student counts, hints about results from LADOK)}
 
@@ -593,7 +593,7 @@ being considered (Fall 2014 - Fall 2017). This amounted to 145 students, where
 passed the course.
 
 We had access to data on these students' results in all compulsory courses in
-the programme as well as the more common elective courses.
+the programme as well as the more common elective courses (21 courses in all).
 %
 At Chalmers students pass a course with a grade of 3, 4, or 5, with 5 being the
 highest grade, or fail the course with no specified grade. Students have many
@@ -601,15 +601,19 @@ opportunities to retake exams from courses they took in past semesters, to
 attempt to obtain a passing score or improve their grade in the course.
 
 
-\subsection{Student results in third year courses}
+\subsection{Student results before and after DSLsofMath}
+
 Our hope was that taking our course would help prepare the students
 for the math-intensive compulsory courses in the subsequent year which
-many students struggle with, Transforms, signals and systems
-(TSS\footnote{In Swedish:
+many students struggle with,
+%
+Transforms, signals and systems (TSS%
+\footnote{In Swedish:
   \href{https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=28314&parsergrp=3}{SSY080
     Transformer, signaler och system}})
 %
-and Control theory (Control\footnote{In Swedish:
+and Control theory (Control%
+\footnote{In Swedish:
   \href{https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=24149&parsergrp=3}{ERE103
     Reglerteknik}})
 
@@ -636,13 +640,11 @@ sign up for DSLsofMath.
 
 As we can see, the students who took DSLsofMath had higher mean grades in the
 third-year courses and were more likely to pass, in particular those who managed
-to pass the DSLsofMath course.
-
-The correlation between taking, and especially passing, DSLsofMath and
-success in the third year courses is clear. But perhaps the students who chose
-to take our course did so because they enjoyed mathematics, and were already
-more likely to succeed in the subsequent math-heavy courses regardless of
-whether they took our course.
+to pass the DSLsofMath course. The correlation between taking, and especially
+passing, DSLsofMath and success in the third year courses is clear. But perhaps
+the students who chose to take our course did so because they enjoyed
+mathematics, and were already more likely to succeed in the subsequent
+math-heavy courses regardless of whether they took our course.
 
 %\subsubsection{Characterising students who chose DSLsofMath}
 %We were curious to see how we could characterize the students who sign up for
@@ -653,7 +655,25 @@ whether they took our course.
 
 We looked at the students' results from their first three semesters at Chalmers,
 prior to having the option of taking DSLsofMath. We were particularly interested
-in students' performance in the compulsory mathematics and physics courses.
+in students' performance in the compulsory mathematics and physics courses
+\footnote{
+  The courses used to calculate the first 3 semesters pass rate and mean grade
+  were
+  TDA555 Introduktion till funktionell programmering,
+  TMV210 Inledande diskret matematik,
+  EDA452 Grundläggande datorteknik,
+  TMV216 Linjär algebra,
+  DAT043 Objektorienterad programmering,
+  TMV170 Matematisk analys,
+  EDA343 Datakommunikation,
+  EDA481 	Maskinorienterad programmering,
+  DAT290 	Datatekniskt projekt,
+  MVE055 Matematisk statistik och diskret matematik,
+  DAT037 Datastrukturer,
+  and TIF085 Fysik för ingenjörer
+  . Of these, the ones used to calculate the Math/physics pass rate and mean
+  grade were TMV210,  TMV216, TMV170, MVE055 and TIF085.
+}.
 \begin{table}[h]
   \centering
   \begin{tabular}{l*{3}{c}}
