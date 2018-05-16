@@ -602,15 +602,16 @@ attempt to obtain a passing score or improve their grade in the course.
 
 
 \subsection{Student results in third year courses}
-Our hope was that taking our course would help prepare the students for
-the math-intensive compulsory courses in the subsequent year which many students
-struggle with, Transforms, signals and systems (TSS)
-%(SSY080 Transformer, signaler och system)
-and Control theory (Control)
-% (ERE103 Reglerteknik).
-
-% SSY080: https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=28314&parsergrp=3
-% ERE103: https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=24149&parsergrp=3
+Our hope was that taking our course would help prepare the students
+for the math-intensive compulsory courses in the subsequent year which
+many students struggle with, Transforms, signals and systems
+(TSS\footnote{In Swedish:
+  \href{https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=28314&parsergrp=3}{SSY080
+    Transformer, signaler och system}})
+%
+and Control theory (Control\footnote{In Swedish:
+  \href{https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=24149&parsergrp=3}{ERE103
+    Reglerteknik}})
 
 In the following table we see the pass rate and the mean grade (of those who
 passed) for the above mentioned courses, where PASS represents the students who
