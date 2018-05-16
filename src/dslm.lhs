@@ -609,6 +609,9 @@ struggle with, Transforms, signals and systems (TSS)
 and Control theory (Control)
 % (ERE103 Reglerteknik).
 
+% SSY080: https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=28314&parsergrp=3
+% ERE103: https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=24149&parsergrp=3
+
 In the following table we see the pass rate and the mean grade (of those who
 passed) for the above mentioned courses, where PASS represents the students who
 took the DSLsofMath course and passed it, IN is the group of students who took
