@@ -773,16 +773,16 @@ changes, better tool support, and empirical evaluation.
   Ideally, in the long term, the DSLsofMath course material should be
   ``absorbed'' by these earlier courses.
 \item Downstream, it would be interesting to see how the new course could affect
-  the way the ``Transforms, signals and systems'' and ``Automatic control''
+  the way the ``Transforms, signals and systems'' and ``Control theory''
   courses are taught.
   %
-  It seems that we may also affect the Physics course -- see the BSc project
+  It seems that we could also affect the Physics course -- see the BSc project
   ``Learn You a Physics'' summary in appendix \ref{app:LearnYouAPhysics}.
 \item When it comes to tool support it would be interesting to see how systems
   like Liquid Haskell, Agda, etc.\ could help the students learn.
   %
   We have been cautious so far, taking it one step at a time, to avoid stressing
-  the student by yet another language / system / tool to learn.
+  the student with yet another language / system / tool to learn.
 \item Finally, we are well aware that our evaluation of the effect of the course
   on the students' learning is lacking the rigour of a proper empirical study.
   %
