@@ -57,16 +57,26 @@
 \maketitle
 
 \begin{abstract}
-  At the workshop on Trends in Functional Programming in Education (TFPIE) in 2015 Ionescu and Jansson presented the approach underlying the ``Domain Specific Languages of Mathematics'' (DSLsofMath) course even before the first course instance.
+  At the workshop on Trends in Functional Programming in Education (TFPIE) in
+  2015 Ionescu and Jansson presented the approach underlying the ``Domain
+  Specific Languages of Mathematics'' (DSLsofMath) course even before the first
+  course instance.
   %
-  We were then encouraged to come back to present our experience and the student results.
+  We were then encouraged to come back to present our experience and the student
+  results.
   %
-  Now, three years later, we have seen three groups of learners attend the course, and the first two groups have also continued to the difficult courses in the third year.
+  Now, three years later, we have seen three groups of learners attend the
+  course, and the first two groups have also continued on to the challenging
+  courses in the subsequent year.
   %
-  In this paper we present three examples from the course material to set the scene, and we present an evaluation of the student results showing improvements in the pass rates and grades on later courses.
+  In this paper we present three examples from the course material to set the
+  scene, and we present an evaluation of the student results showing
+  improvements in the pass rates and grades in later courses.
 \end{abstract}
 
-\paragraph{Keywords:} functional programming, computer science education, calculus, didactics, formalisation, correctness, Haskell, types, syntax, semantics, scope
+\paragraph{Keywords:} functional programming, computer science education,
+calculus, didactics, formalisation, correctness, Haskell, types, syntax,
+semantics, scope
 
 \section{Introduction}
 
@@ -79,7 +89,7 @@ This activity started from a desire to improve the mathematical
 education of computer scientists and the computer science education of
 mathematicians.
 %
-In 2014 Ionescu and Jansson applied for a pedagogical project to
+In 2014 Ionescu and Jansson applied for a pedagogical project grant to
 develop a new BSc level course, and from 2016 on the course has been
 offered to students at Chalmers and University of Gothenburg.
 %
@@ -93,8 +103,8 @@ We were then encouraged to come back to present our experience and the
 student results.
 %
 Now, three years later, we have seen three groups of learners attend
-the course, and the first two groups have also continued to the
-difficult courses in the third year.
+the course, and the first two groups have also continued on to the
+mathematically challenging courses in their third year.
 %*TODO: what is the best wording?: class / cohort / group / form ...
 %\todo{more on current status (student counts, hints about results from LADOK)}
 
@@ -558,7 +568,8 @@ differential equation (a PDE).
 % Describe how the ``measurements'' were done and interpret the results.
 
 We considered student results for students from the CSE programme at Chalmers%
-\footnote{Computer Science and Engineering (CSE) is a five-year BSc+MSc programme at Chalmers. It is called ``Datateknik (D)'' in Swedish.}
+\footnote{Computer Science and Engineering (CSE) is a five-year BSc+MSc
+  programme at Chalmers. It is called ``Datateknik (D)'' in Swedish.}
 who started their studies in 2014 and 2015. In the spring of their second year at
 Chalmers (2016 and 2017), these students had the option of either taking the
 DSLsofMath course or the Concurrent Programming course.
@@ -654,26 +665,42 @@ but it does seem likely.
 
 \subsection{Students' course assessment and resulting changes}
 
-Each course instance has been evaluated with a standard questionnaire sent to all participants as part of the university wide course evaluation process.
+Each course instance has been evaluated with a standard questionnaire sent to
+all participants as part of the university wide course evaluation process.
 %
-The evaluation of the first instance, with Cezar Ionescu as lecturer, identified a need to restructure the initial four-lecture sequence, to re-order a few lectures and to replace the two guest lectures by Linear Algebra.
+The evaluation of the first instance, with Cezar Ionescu as lecturer, identified
+a need to restructure the initial four-lecture sequence, to re-order a few
+lectures and to replace the two guest lectures by Linear Algebra.
 %
 
-In preparation for the second instance, with Patrik Jansson as lecturer, the initial lecture sequence was changed to include more Haskell introduction and less formal logic, and two new lectures on Linear Algebra were developed.
+In preparation for the second instance, with Patrik Jansson as lecturer, the
+initial lecture sequence was changed to include more Haskell introduction and
+less formal logic, and two new lectures on Linear Algebra were developed.
 %
-In the evaluation of the second (2017) instance, the students requested more lecture notes and more weekly exercises to make it easier to get started.
+In the evaluation of the second (2017) instance, the students requested more
+lecture notes and more weekly exercises to make it easier to get started.
 %
-The evaluation also indicated that the average student had spent too few hours on the course, and the exam results suffered (42\% failed, up from 32\% in 2016).
+The evaluation also indicated that the average student had spent too few hours
+on the course, and the exam results suffered (42\% failed, up from 32\% in 2016).
 
-At this point we decided to push for course material development and one of the student evaluators from 2017 (Daniel Heurlin) was hired part time to help out with these improvements.
+At this point we decided to push for course material development and one of the
+student evaluators from 2017 (Daniel Heurlin) was hired part time to help out
+with these improvements.
 %
-Patrik spent the autumn of 2017 on converting raw text notes and photos of blackboards to LaTeX-based literate Haskell lecture notes covering the full course and Daniel developed more exercises to solve.
+Patrik spent the autumn of 2017 on converting raw text notes and photos of
+blackboards to LaTeX-based literate Haskell lecture notes covering the full
+course and Daniel developed more exercises to solve.
 %
-The primary focus was on complementing the exam questions from earlier years with easier exercises to start each week with and with more material on functional programming in Haskell.
+The primary focus was on complementing the exam questions from earlier years
+with easier exercises to start each week with and with more material on
+functional programming in Haskell.
 
-The recent evaluation of the 2018 instance was overall positive and the course saw a strong improvement in the pass rate: only 11\% failed.
+The recent evaluation of the 2018 instance was overall positive and the course
+saw a strong improvement in the pass rate: only 11\% failed.
 %
-The student evaluators suggested to ``increase the pressure'' on solving the exercises, to make the students better prepared for the hand-in assignments and the written exam.
+The student evaluators suggested to ``increase the pressure'' on solving the
+exercises, to make the students better prepared for the hand-in assignments and
+the written exam.
 
 \section{Related work}
 
@@ -690,37 +717,54 @@ Elm to introduce algebraic thinking to students.
 In \cite{DBLP:journals/corr/Walck16} and \cite{DBLP:journals/corr/Walck14},
 Walck describes using Haskell programming to deepen university students'
 understanding of physics, and in \cite{EPTCS106.3} Ragde describes using
-functional programming to introduce university students to more precise mathematical notation.
+functional programming to introduce university students to more precise
+mathematical notation.
 We are not aware of previous literature on the use of functional programming to
 present mathematical analysis as we have done.
 
 \section{Conclusions and future work}
 
-During the last four years we have developed course material and worked with 150+ computer science students to improve their mathematical education through the course ``Domain Specific Languages of Mathematics''.
+During the last four years we have developed course material and worked with
+150+ computer science students to improve their mathematical education through
+the course ``Domain Specific Languages of Mathematics''.
 %
-We have shown how mathematical concepts like |lim|, |D|, |Lagrangian| can be explored and explained using typed functional programming.
+We have shown how mathematical concepts like |lim|, |D|, |Lagrangian| can be
+explored and explained using typed functional programming.
 % TODO perhaps include for the full paper Sometimes new insights arise: Stream calculus, for example.
 %
-(Much more about that can be read in the lecture notes \cite{JanssonIonescuDSLsofMathCourse}.)
+(Much more about that can be read in the lecture notes
+\cite{JanssonIonescuDSLsofMathCourse}.)
 %
-We have investigated the group of students who picked DSLsofMath as an elective and we have measured positive results on later courses with mathematical content.
+We have investigated the group of students who picked DSLsofMath as an elective
+and we have measured positive results on later courses with mathematical content.
 %\todo[inline]{TODO[Solrun] perhaps add more ``meat'' about the student results}
 
-There are several avenues for future work: upstream and downstream curriculum changes, better tool support, and empirical evaluation.
+There are several avenues for future work: upstream and downstream curriculum
+changes, better tool support, and empirical evaluation.
 %
 \begin{itemize}
-\item Upstream, we would really like to work with the teachers of the mathematics courses in the first year to see if some of the ideas from DSLsofMath could be included already at that stage.
+\item Upstream, we would really like to work with the teachers of the
+  mathematics courses in the first year to see if some of the ideas from
+  DSLsofMath could be included already at that stage.
   %
-  Ideally, in the long term, the DSLsofMath course material should be ``absorbed'' by these earlier courses.
-\item Downstream, it would be interesting to see how the new course could affect the way the ``Transforms, signals and systems'' and ``Automatic control'' courses are taught.
+  Ideally, in the long term, the DSLsofMath course material should be
+  ``absorbed'' by these earlier courses.
+\item Downstream, it would be interesting to see how the new course could affect
+  the way the ``Transforms, signals and systems'' and ``Automatic control''
+  courses are taught.
   %
-  It seems that we may also affect the Physics course -- see the BSc project ``Learn You a Physics'' summary in appendix \ref{app:LearnYouAPhysics}.
-\item When it comes to tool support it would be interesting to see how systems like Liquid Haskell, Agda, etc.\ could help the students learn.
+  It seems that we may also affect the Physics course -- see the BSc project
+  ``Learn You a Physics'' summary in appendix \ref{app:LearnYouAPhysics}.
+\item When it comes to tool support it would be interesting to see how systems
+  like Liquid Haskell, Agda, etc.\ could help the students learn.
   %
-  We have been cautious so far, taking it one step at a time, to avoid stressing the student by yet another language / system / tool to learn.
-\item Finally, we are well aware that our evaluation of the effect of the course on the students' learning is lacking the rigour of a proper empirical study.
+  We have been cautious so far, taking it one step at a time, to avoid stressing
+  the student by yet another language / system / tool to learn.
+\item Finally, we are well aware that our evaluation of the effect of the course
+  on the students' learning is lacking the rigour of a proper empirical study.
   %
-  It would be interesting to work with experts on teaching and learning in higher education on such a study.
+  It would be interesting to work with experts on teaching and learning in
+  higher education on such a study.
 
 
 \end{itemize}
@@ -780,17 +824,32 @@ and innovation programme.
 \section{BSc project ``Learn You a Physics''}
 \label{app:LearnYouAPhysics}
 
-The online learning material \href{https://dslsofmath.github.io/BScProj2018/}{``Learn You a Physics''} (by E. Sjöström, O. Lundström, J. Johansson, B. Werner) is the result of a BSc project at Chalmers (supervised by P. Jansson) where the goal is to create an introductory learning material for physics aimed at programmers with a basic understanding of Haskell.
+The online learning material
+\href{https://dslsofmath.github.io/BScProj2018/}{``Learn You a Physics''} (by E.
+Sjöström, O. Lundström, J. Johansson, B. Werner) is the result of a BSc project
+at Chalmers (supervised by P. Jansson) where the goal is to create an
+introductory learning material for physics aimed at programmers with a basic
+understanding of Haskell.
 %
-It does this by identifying key areas in physics with a well defined scope, for example dimensional analysis or single particle mechanics, and develops a domain specific language around each of these areas.
+It does this by identifying key areas in physics with a well defined scope, for
+example dimensional analysis or single particle mechanics, and develops a domain
+specific language around each of these areas.
 %
-The implementation of these DSLs are the meat of the learning material with accompanying text to explain every step and how it relates to the physics of that specific area.
+The implementation of these DSLs are the meat of the learning material with
+accompanying text to explain every step and how it relates to the physics of
+that specific area.
 %
-The text is written in such a way as to be as non-frightening as possible, and to only require a beginner knowledge in Haskell.
+The text is written in such a way as to be as non-frightening as possible, and
+to only require a beginner knowledge in Haskell.
 %
-Inspiration is taken from \href{http://learnyouahaskell.com/}{Learn You a Haskell for Great Good} and the project \href{https://github.com/DSLsofMath/DSLsofMath}{DSLsofMath} at Chalmers and University of Gothenburg.
+Inspiration is taken from \href{http://learnyouahaskell.com/}{Learn You a
+  Haskell for Great Good} and the project
+\href{https://github.com/DSLsofMath/DSLsofMath}{DSLsofMath} at Chalmers and
+University of Gothenburg.
 %
-The \href{https://github.com/DSLsofMath/BScProj2018/tree/master/Physics}{source code} and \href{https://dslsofmath.github.io/BScProj2018/}{learning material} is freely available online.
+The \href{https://github.com/DSLsofMath/BScProj2018/tree/master/Physics}{source
+  code} and \href{https://dslsofmath.github.io/BScProj2018/}{learning material}
+is freely available online.
 
 \bibliographystyle{../eptcsstyle/eptcs}
 \bibliography{dslm}
