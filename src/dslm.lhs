@@ -584,7 +584,7 @@ We considered student results for students from the CSE programme at Chalmers%
   programme at Chalmers. It is called ``Datateknik (D)'' in Swedish.}
 who started their studies in 2014 and 2015. In the spring of their second year at
 Chalmers (2016 and 2017), these students had the option of either taking the
-DSLsofMath course or the Concurrent Programming course.
+DSLsofMath course or a course on Parallel computer organization and design.
 
 We considered only ``active'' students, that is, students who had signed up for
 at least half of the compulsory courses in the CSE programme during the semesters
@@ -601,11 +601,13 @@ opportunities to retake exams from courses they took in past semesters, to
 attempt to obtain a passing score or improve their grade in the course.
 
 
-\subsection{Results in third year courses}
-Our hypothesis was that taking our course would help prepare the students for
-the math-intensive compulsory courses in the third year which many students
-struggle with, Transforms, signals and systems (SSY080 Transformer, signaler och
-system) and Control theory (ERE103 Reglerteknik).
+\subsection{Student results in third year courses}
+Our hope was that taking our course would help prepare the students for
+the math-intensive compulsory courses in the subsequent year which many students
+struggle with, Transforms, signals and systems (TSS)
+%(SSY080 Transformer, signaler och system)
+and Control theory (Control)
+% (ERE103 Reglerteknik).
 
 In the following table we see the pass rate and the mean grade (of those who
 passed) for the above mentioned courses, where PASS represents the students who
@@ -618,10 +620,10 @@ sign up for DSLsofMath.
   \begin{tabular}{l*{3}{c}}
                        & PASS  & IN   & OUT  \\
     \hline
-    SSY080 pass rate   & 77\%  & 57\% & 36\% \\
-    SSY080 mean grade  & 4.23  & 4.10 & 3.58 \\
-    ERE103 pass rate   & 68\%  & 45\% & 40\% \\
-    ERE103 mean grade  & 3.91  & 3.88 & 3.35 \\
+    TSS pass rate   & 77\%  & 57\% & 36\% \\
+    TSS mean grade  & 4.23  & 4.10 & 3.58 \\
+    Control pass rate   & 68\%  & 45\% & 40\% \\
+    Control mean grade  & 3.91  & 3.88 & 3.35 \\
 
   \end{tabular}
   \caption{Pass rate and mean grade in third year courses for students who took and
