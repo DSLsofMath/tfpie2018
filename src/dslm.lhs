@@ -163,9 +163,9 @@ REAL| from \cite{adams2010calculus}:
 \begin{quote}
   We say that \(f(x)\) \textbf{approaches the limit} \(L\) as \(x\)
   \textbf{approaches} \(a\), and we write
-
+%
   \[\lim_{x\to a} f(x) = L,\]
-
+%
   if the following condition is satisfied:\\
   for every number \(\epsilon > 0\) there exists a number
   \(\delta > 0\), possibly depending on \(\epsilon\), such that if
