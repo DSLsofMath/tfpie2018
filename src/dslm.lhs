@@ -667,7 +667,7 @@ in students' performance in the compulsory mathematics and physics courses
   DAT037 Datastrukturer,
   and TIF085 Fysik för ingenjörer
   . Of these, the ones used to calculate the Math/physics pass rate and mean
-  grade were TMV210,  TMV216, TMV170, MVE055
+  grade were TMV210,  TMV216, TMV170, MVE055 and TIF085.
 }.                                             
 \begin{table}[h]                                
   \centering                                    
