@@ -108,7 +108,7 @@ mathematically challenging courses in their third year.
 %*TODO: what is the best wording?: class / cohort / group / form ...
 %\todo{more on current status (student counts, hints about results from LADOK)}
 
-The course focus is on types \& specifications, syntax \& semantics,
+The course focus is on types and specifications and the syntax and semantics
 of domain specific languages used as tools for thinking.
 %
 In this paper we present three examples from the course material to
@@ -123,7 +123,7 @@ Signals, and Systems \cite{JonssonTSLwithDLS2016} and one in 2018
 called ``Learn You a Physics'' --- see appendix
 \ref{app:LearnYouAPhysics}).
 
-\section{Types in Mathematics}
+\section{Static checking: Scope and Types in Mathematics}
 
 The DSLsofMath lecture notes \cite{JanssonIonescuDSLsofMathCourse}
 have evolved from raw text notes for the first instance to 152 pages
@@ -151,7 +151,7 @@ In our first example here, limits, we show the students that an
 innocent-looking ``if A then B'' can actually implicitly bind one of
 the names occurring in A.
 
-\subsection{Case 1:  The limit of a function}
+\subsection{Case 1: Scoping Mathematics: The limit of a function}
 \label{sec:LimitOfFunction}
 
 This case is from Chapter two of the DSLsofMath lecture notes which
