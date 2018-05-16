@@ -181,7 +181,7 @@ REAL| from \cite{adams2010calculus}:
 The |lim| notation has four components: a variable name |x|, a point
 |a| an expression \(f(x)\) and the limit |L|.
 %
-The variable name + the expression can be combined into just the
+The variable name and the expression can be combined into just the
 function |f| and this leaves us with three essential components: |a|, |f|,
 and |L|.
 %
@@ -231,7 +231,8 @@ exercise.)
 
 \subsection{Case 2: Typing Mathematics: derivative of a function}
 
-The lecture notes includes some other material in between, but here we
+The lecture notes include some other material in between this example and the
+previous one, but here we
 jump directly to dissecting one of the classical definitions of the
 derivative (from \cite{adams2010calculus}).
 %
