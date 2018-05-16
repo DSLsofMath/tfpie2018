@@ -109,7 +109,8 @@ mathematically challenging compulsory courses in the subsequent year.
 %\todo{more on current status (student counts, hints about results from LADOK)}
 
 The course focus is on types and specifications and on the syntax and semantics
-of domain specific languages used as tools for thinking.
+of domain specific languages used as tools for thinking
+(for more details see appendix \ref{app:learningoutcomes}).
 %
 In this paper we present three examples from the course material to
 set the scene, and we present an evaluation of the student results.
@@ -656,7 +657,7 @@ math-heavy courses regardless of whether they took our course.
 We looked at the students' results from their first three semesters at Chalmers,
 prior to having the option of taking DSLsofMath. We were particularly interested
 in students' performance in the compulsory mathematics and physics courses
-\footnote{For details see appendix \ref{app:coursecodes}.}.
+(for details see appendix \ref{app:coursecodes}).
 %
 \begin{table}[h]
   \centering
@@ -778,7 +779,7 @@ changes, better tool support, and empirical evaluation.
   %
   It seems that we could also affect the Physics course -- see the BSc project
   ``Learn You a Physics'' summary in appendix \ref{app:LearnYouAPhysics}.
-\item When it comes to tool support it would be interesting to see how systems
+\item When it comes to tool support it would be interesting to see how proof systems
   like Liquid Haskell, Agda, etc.\ could help the students learn.
   %
   We have been cautious so far, taking it one step at a time, to avoid stressing
