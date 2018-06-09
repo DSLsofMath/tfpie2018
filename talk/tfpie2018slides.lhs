@@ -91,12 +91,11 @@ Not working code, rather working understanding of concepts
 \begin{frame}
   \frametitle{Limit of a function - continued}
 First attempt at translation:
-\[
-  lim\; a\; f\; L  =  \forall (\epsilon > 0) (\exists (\delta > 0) (\forall x (P
-  \; \epsilon\; \delta\; x)))
+  \[
+  lim\; a\; f\; L  =  \forall (\epsilon > 0) (\exists (\delta > 0) (P \; \epsilon\; \delta))
 \]
 where
-\[P \;\epsilon \;\delta \; x = (0 < \lvert x - a\rvert < \delta) \Rightarrow (x \in
+\[P \;\epsilon \;\delta = (0 < \lvert x - a\rvert < \delta) \Rightarrow (x \in
   Dom\, f  \wedge \lvert f(x) - L\rvert < \epsilon))\]
 \end{frame}
 
@@ -105,11 +104,12 @@ where
 \begin{frame}
   \frametitle{Limit of a function - continued}
 Finally:
-  \[
-  lim\; a\; f\; L  =  \forall (\epsilon > 0) (\exists (\delta > 0) (P \; \epsilon\; \delta))
+\[
+  lim\; a\; f\; L  =  \forall (\epsilon > 0) (\exists (\delta > 0) (\forall x (P
+  \; \epsilon\; \delta\; x)))
 \]
 where
-\[P \;\epsilon \;\delta = (0 < \lvert x - a\rvert < \delta) \Rightarrow (x \in
+\[P \;\epsilon \;\delta \; x = (0 < \lvert x - a\rvert < \delta) \Rightarrow (x \in
   Dom\, f  \wedge \lvert f(x) - L\rvert < \epsilon))\]
 \end{frame}
 
