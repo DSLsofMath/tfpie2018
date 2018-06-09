@@ -5,7 +5,7 @@ default: $(NAME).pdf
 $(NAME).pdf:  $(NAME).tex
 	latexmk -pdf $(NAME).tex
 
-$(NAME).tex: $(NAME).lhs $(NAME).format 
+$(NAME).tex: $(NAME).lhs $(NAME).format dslmagda.format
 	lhs2TeX --poly $(NAME).lhs > $(NAME).tex
 
 clean:
