@@ -8,11 +8,14 @@
 \title{Examples and Results from a BSc-level Course on\\ Domain Specific Languages of Mathematics}
 
 \author[P. Jansson and S.H. Einarsdóttir and C. Ionescu]{
-  Patrik Jansson \qquad {\small \texttt{ patrikj@@chalmers.se}}\\
+  Patrik Jansson
+  %\qquad {\small \texttt{ patrikj@@chalmers.se}}\\
 \and
-  Sólrún Halla Einarsdóttir \qquad {\small \texttt{slrn@@chalmers.se}}\\
+\underline{Sólrún Halla Einarsdóttir}
+%\qquad {\small \texttt{slrn@@chalmers.se}}\\
 \and
-  Cezar Ionescu \qquad {\small \texttt{cezar@@chalmers.se}}
+Cezar Ionescu
+%\qquad {\small \texttt{cezar@@chalmers.se}}
 } %TODO: get this more nicely aligned
 
 \begin{document}
@@ -44,24 +47,18 @@ functional programming perspective.
 \frametitle{Course focus}
 
 \begin{itemize}
-\item make functions and types explicit
+\item Make functions and types explicit
 
-\item make the distinction between syntax and semantics explicit
+\item Explicit distinction between syntax and semantics
 
-\item use types as carriers of semantic information, not just variable
-  names
+\item Types as carriers of semantic information
 
-\item introduce functions and types for implicit operations such as
-  the power series interpretation of a sequence
+%\item introduce functions and types for implicit operations such as the power series interpretation of a sequence
 
-\item make variable binding and scope explicit
+\item Organize the types and functions in DSLs
 
-\item use a calculational style for proofs
-
-\item organize the types and functions in DSLs
+\item Make variable binding and scope explicit
 \end{itemize}
-
-Not working code, rather working understanding of concepts
 
 \end{frame}
 
@@ -84,6 +81,27 @@ Not working code, rather working understanding of concepts
     \lvert f(x) - L\rvert  < \epsilon
   \]
 \end{quote}
+\begin{flushright}
+  - Adams \& Essex, Calculus - A Complete Course
+\end{flushright}
+\end{frame}
+%% -------------------------------------------------------------------
+
+\begin{frame}
+  \frametitle{Limit of a function - continued}
+\begin{quote}
+%
+  \[\lim_{x\to a} f(x) = L,\]
+%
+  if \(\forall \epsilon > 0\) \(\exists \delta > 0\),\\
+  such that if $0 < \lvert x - a\rvert < \delta$, then
+  \[
+    x\in Dom\, f \wedge \lvert f(x) - L\rvert  < \epsilon
+  \]
+\end{quote}
+\begin{flushright}
+  - Adams \& Essex, Calculus - A Complete Course
+\end{flushright}
 \end{frame}
 
 %% -------------------------------------------------------------------
