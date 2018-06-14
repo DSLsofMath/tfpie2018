@@ -2,6 +2,7 @@
 \documentclass{beamer}
 \usepackage[utf8x]{inputenc}
 \usepackage{hyperref}
+\usepackage{xcolor}
 \usetheme{boxes}
 % TODO: look into what other theme to use?
 \addheadbox{section}{\quad \tiny TFPIE, 2018-06-14}
@@ -93,15 +94,15 @@ functional programming perspective.
 %
   \[\lim_{x\to a} f(x) = L,\]
 %
-  if \(\forall \epsilon > 0\) \(\exists \delta > 0\),\\
-  such that if $0 < \lvert x - a\rvert < \delta$, then
+  if \[
+    \forall \epsilon > 0\]
+    \[\exists \delta > 0\]
+  such that
+  if \[0 < \lvert x - a\rvert < \delta,\] then
   \[
     x\in Dom\, f \wedge \lvert f(x) - L\rvert  < \epsilon
   \]
 \end{quote}
-\begin{flushright}
-  - Adams \& Essex, Calculus - A Complete Course
-\end{flushright}
 \end{frame}
 
 %% -------------------------------------------------------------------
@@ -151,9 +152,9 @@ where
 % Where is the course in the curriculum and why was it developed for this program
 \begin{frame}
 \frametitle{Course context}
-% TODO: more contents here
+% TODO: more contents here - image thingy?
 \begin{itemize}
-\item Optional course, spring of second year in CSE programme
+\item Semi-compulsory course, spring of second year in CSE programme
 \item Students struggle with math-heavy courses in third year
 \item Students do well with (functional) programming
 \item Can a functional programming perspective help to clarify the mathematics?
@@ -166,7 +167,29 @@ where
 % Student numbers, pass rates
 \begin{frame}
 \frametitle{Course results}
-TODO: Display information about students i.e. numbers, pass rate
+\begin{itemize}
+\item 2016: 28 students, pass rate: 58\%
+\item 2017: 43 students, pass rate: 68\%
+\item 2018: 39 students, pass rate: 89\%
+\end{itemize}
+\end{frame}
+
+%% -------------------------------------------------------------------
+% Table
+\begin{frame}
+\frametitle{CSE program}
+\begin{table}[h]
+  \centering
+  \begin{tabular}{lll}
+                       & Fall  & Spring\\
+    \hline
+    Year 1  & \textcolor{gray}{Compulsory courses}  & \textcolor{gray}{Compulsory courses} \\
+    Year 2  & \textcolor{gray}{Compulsory courses}  & \textcolor{red}{DSLsofMath} OR ConcProg \\
+    Year 3  & \textcolor{blue}{TSS + Control}  & ... \\
+
+  \end{tabular}
+\end{table}
+
 \end{frame}
 
 %% -------------------------------------------------------------------
@@ -184,9 +207,10 @@ TODO: Display information about students i.e. numbers, pass rate
     Control mean grade  & 3.91  & 3.88 & 3.35 \\
 
   \end{tabular}
-  \caption{Pass rate and mean grade in third year courses for students who took and
-  passed DSLsofMath and those who did not.}
+  %\caption{Pass rate and mean grade in third year courses for students who took and
+  %  passed DSLsofMath and those who did not.}
 \end{table}
+  Group sizes: PASS 34, IN 53, OUT 92 (145 in all)
 
 \end{frame}
 
@@ -204,10 +228,17 @@ TODO: Display information about students i.e. numbers, pass rate
     Math/physics mean grade          & 4.01  & 3.84 & 3.55 \\
 
   \end{tabular}
-  \caption{Pass rate and mean grade for courses taken prior to taking (or not
-    taking) DSLsofMath.}
+  %\caption{Pass rate and mean grade for courses taken prior to taking (or not
+  % taking) DSLsofMath.}
 \end{table}
+  Group sizes: PASS 34, IN 53, OUT 92 (145 in all)
 \end{frame}
+
+%\begin{frame}
+%\frametitle{}
+%\vfill
+%\vfill
+%\end{frame}
 
 % Student feedback?
 
@@ -216,19 +247,20 @@ TODO: Display information about students i.e. numbers, pass rate
 % Conclusions
 % Future work?
 \begin{frame}
-\frametitle{Conclusions and future work}
+\frametitle{Future work}
 \begin{itemize}
-\item Positive results
-\item Possible future work:
-  \begin{itemize}
   \item Working with earlier and later courses, can these ideas be useful in
     their curriculum? 
   \item Better tool support in the course, proof systems?
-  \item More rigorous empirical evaluation of course efficacy.
+  \item More rigorous empirical evaluation of course efficacy
     
-  \end{itemize}
 \end{itemize}
 
+\end{frame}
+\begin{frame}
+  \frametitle{Thanks!}
+  % Link to lecture notes!
+  \url{https://github.com/DSLsofMath/DSLsofMath}
 \end{frame}
 
 
