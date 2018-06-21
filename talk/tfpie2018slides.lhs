@@ -37,7 +37,9 @@ Cezar Ionescu
 \begin{itemize}
 \item Undergraduate course developed at Chalmers, taught since 2016.
 \item Goal: Encourage students to approach mathematical domains from a
-functional programming perspective.
+  functional programming perspective.
+\item Lecture notes and more available at: 
+  \url{https://github.com/DSLsofMath/DSLsofMath}
 \end{itemize}
 \end{frame}
 
@@ -74,12 +76,12 @@ functional programming perspective.
   \[\lim_{x\to a} f(x) = L,\]
 %
   if the following condition is satisfied:\\
-  for every number \(\epsilon > 0\) there exists a number
-  \(\delta > 0\), possibly depending on \(\epsilon\), such that if
+  for every number \(\varepsilon > 0\) there exists a number
+  \(\delta > 0\), possibly depending on \(\varepsilon\), such that if
   $0 < \lvert x - a\rvert < \delta$, then \(x\) belongs to the domain of \(f\)
   and
   \[
-    \lvert f(x) - L\rvert  < \epsilon
+    \lvert f(x) - L\rvert  < \varepsilon
   \]
 \end{quote}
 \begin{flushright}
@@ -95,12 +97,12 @@ functional programming perspective.
   \[\lim_{x\to a} f(x) = L,\]
 %
   if \[
-    \forall \epsilon > 0\]
+    \forall \varepsilon > 0\]
     \[\exists \delta > 0\]
   such that
   if \[0 < \lvert x - a\rvert < \delta,\] then
   \[
-    x\in Dom\, f \wedge \lvert f(x) - L\rvert  < \epsilon
+    x\in Dom\, f \wedge \lvert f(x) - L\rvert  < \varepsilon
   \]
 \end{quote}
 \end{frame}
@@ -111,11 +113,11 @@ functional programming perspective.
   \frametitle{Limit of a function - continued}
 First attempt at translation:
   \[
-  lim\; a\; f\; L  =  \forall (\epsilon > 0) (\exists (\delta > 0) (P \; \epsilon\; \delta))
+  lim\; a\; f\; L  =  \forall (\varepsilon > 0) (\exists (\delta > 0) (P \; \varepsilon\; \delta))
 \]
 where
-\[P \;\epsilon \;\delta = (0 < \lvert x - a\rvert < \delta) \Rightarrow (x \in
-  Dom\, f  \wedge \lvert f(x) - L\rvert < \epsilon))\]
+\[P \;\varepsilon \;\delta = (0 < \lvert x - a\rvert < \delta) \Rightarrow (x \in
+  Dom\, f  \wedge \lvert f(x) - L\rvert < \varepsilon))\]
 \end{frame}
 
 %% -------------------------------------------------------------------
@@ -124,12 +126,12 @@ where
   \frametitle{Limit of a function - continued}
 Finally:
 \[
-  lim\; a\; f\; L  =  \forall (\epsilon > 0) (\exists (\delta > 0) (\forall x (P
-  \; \epsilon\; \delta\; x)))
+  lim\; a\; f\; L  =  \forall (\varepsilon > 0) (\exists (\delta > 0) (\forall x (P
+  \; \varepsilon\; \delta\; x)))
 \]
 where
-\[P \;\epsilon \;\delta \; x = (0 < \lvert x - a\rvert < \delta) \Rightarrow (x \in
-  Dom\, f  \wedge \lvert f(x) - L\rvert < \epsilon))\]
+\[P \;\varepsilon \;\delta \; x = (0 < \lvert x - a\rvert < \delta) \Rightarrow (x \in
+  Dom\, f  \wedge \lvert f(x) - L\rvert < \varepsilon))\]
 \end{frame}
 
 %% -------------------------------------------------------------------
@@ -161,19 +163,6 @@ where
 \end{itemize}
 \end{frame}
 
-% Show results
-
-%% -------------------------------------------------------------------
-% Student numbers, pass rates
-\begin{frame}
-\frametitle{Course results}
-\begin{itemize}
-\item 2016: 28 students, pass rate: 58\%
-\item 2017: 43 students, pass rate: 68\%
-\item 2018: 39 students, pass rate: 89\%
-\end{itemize}
-\end{frame}
-
 %% -------------------------------------------------------------------
 % Table
 \begin{frame}
@@ -191,6 +180,19 @@ where
 \end{table}
 
 \end{frame}
+% Show results
+
+%% -------------------------------------------------------------------
+% Student numbers, pass rates
+\begin{frame}
+\frametitle{Course results}
+\begin{itemize}
+\item 2016: 28 students, pass rate: 68\%
+\item 2017: 43 students, pass rate: 58\%
+\item 2018: 39 students, pass rate: 89\%
+\end{itemize}
+\end{frame}
+
 
 %% -------------------------------------------------------------------
 % Subsequent results
@@ -234,11 +236,25 @@ where
   Group sizes: PASS 34, IN 53, OUT 92 (145 in all)
 \end{frame}
 
-%\begin{frame}
-%\frametitle{}
-%\vfill
-%\vfill
-%\end{frame}
+\begin{frame}
+\frametitle{Results}
+\begin{table}[h]
+  \centering
+  \begin{tabular}{l*{3}{c}}
+                                     & PASS  & IN   & OUT  \\
+    \hline
+    Pass rate for first 3 semesters  & 97\%  & 92\% & 86\% \\
+    Math/physics pass rate           & 96\%  & 91\% & 83\% \\
+    TSS pass rate   & 77\%  & 57\% & 36\% \\
+    Control pass rate   & 68\%  & 45\% & 40\% \\
+
+  \end{tabular}
+  %\caption{Pass rate and mean grade for courses taken prior to taking (or not
+  % taking) DSLsofMath.}
+\end{table}
+  Group sizes: PASS 34, IN 53, OUT 92 (145 in all)
+
+\end{frame}
 
 % Student feedback?
 
