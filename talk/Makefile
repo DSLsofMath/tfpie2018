@@ -1,4 +1,5 @@
-NAME=tfpie2018slides
+NAME=WG2.1_Brandenburg_Jansson_slides
+# NAME=tfpie2018slides
 
 default: $(NAME).pdf
 
