@@ -11,8 +11,17 @@
 \hypersetup{pdfpagemode={FullScreen}}
 \RequirePackage{ucs}
 \RequirePackage{amsfonts}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{trees,graphs,quotes}
 %include dslmagda.format
 %include tfpie2018slides.format
+% the `doubleequals' macro is due to Jeremy Gibbons
+\def\doubleequals{\mathrel{\unitlength 0.01em
+  \begin{picture}(78,40)
+    \put(7,34){\line(1,0){25}} \put(45,34){\line(1,0){25}}
+    \put(7,14){\line(1,0){25}} \put(45,14){\line(1,0){25}}
+  \end{picture}}}
 
 \title[DSLM Examples \& Results]{Examples and Results from a BSc-level Course on\\ Domain Specific Languages of Mathematics}
 \date{WG2.1, 2018-07-05}
@@ -71,7 +80,7 @@
 
 \item Organize the types and functions in DSLs
 
-\item Make variable binding and scope explicit
+\item{} [New] Make variable binding and scope explicit
 \end{itemize}
 \end{block}
 
@@ -84,7 +93,7 @@ Lecture notes and more available at:
 %% -------------------------------------------------------------------
 
 \begin{frame}
-\frametitle{Example - The limit of a function}
+\frametitle{Example 1 - The limit of a function}
 \begin{quote}
   We say that \(f(x)\) \textbf{approaches the limit} \(L\) as \(x\)
   \textbf{approaches} \(a\), and we write
@@ -149,13 +158,92 @@ lim a f L  =  Forall (epsilon > 0) (Exists (delta > 0) (P epsilon delta))
          Q epsilon delta x =  (0 < absBar (x - a) < delta) =>
                               (x `elem` Dom f  && absBar (f x - L) < epsilon))
 \end{spec}
+
+\pause
+Lesson learned: be careful with scope and binding (of |x| in this case).
+
+\pause
+\vspace{1cm}
+{\small [We will now assume limits exist and use |lim| as a function from |a| and |f| to |L|.]}
+
+\end{frame}
+
+%% -------------------------------------------------------------------
+
+\newsavebox{\diagramD}
+\savebox{\diagramD}{%
+\begin{tikzcd}
+         \pgfmatrixnextcell \arrow[dl, "|D f|", swap] \arrow[d, "|psi f|"] |REAL| \\
+  |REAL| \pgfmatrixnextcell \arrow[l, "|lim 0|"] |(REAL->REAL)|
+\end{tikzcd}%
+}
+\begin{frame}[fragile]{Example 2: derivative}
+
+\begin{quote}
+  The \textbf{derivative} of a function |f| is another function |f'| defined by
+%
+  \[
+    f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+  \]
+%
+  at all points |x| for which the limit exists (i.e., is a finite real
+  number). If \(f'(x)\) exists, we say that |f| is \textbf{differentiable}
+  at |x|.
+\end{quote}
+
+
+We can write
+
+\savecolumns
+\begin{spec}
+  D f x  = lim 0 g        where            g  h = frac (f(x+h) - f x) h
+\end{spec}
+\pause
+\vspace{-0.5cm}
+\restorecolumns
+\begin{spec}
+  D f x  = lim 0 (phi x)  where       phi  x  h = frac (f(x+h) - f x) h
+\end{spec}
+\pause
+\vspace{-0.5cm}
+\restorecolumns
+\begin{spec}
+  D f    = lim 0 . psi f  where  psi  f    x  h = frac (f(x+h) - f x) h {-"\usebox{\diagramD}"-}
+\end{spec}
+\vspace*{-5cm}\hspace*{8cm}\vspace*{15cm}
+
+\end{frame}
+
+\begin{frame}{Derivatives, cont.}
+
+Examples:
+
+\begin{spec}
+  D : (REAL->REAL) -> (REAL->REAL)
+
+  sq x       =  x^2
+  double x   =  2*x
+  c2 x       =  2
+
+  sq'   ==  D sq   == D (\x -> x^2) == D ({-"{}"-}^2) == (2*) == double
+  sq''  ==  D sq'  == D double == c2 == const 2
+\end{spec}
+
+Note: we cannot \emph{implement} |D| (of this type) in Haskell.
+%
+
+Given only |f : REAL -> REAL| as a ``black box'' we
+cannot compute the actual derivative |f' : REAL -> REAL|.
+
+We need the ``source code'' of |f| to apply rules from calculus.
+
 \end{frame}
 
 %% -------------------------------------------------------------------
 % Overview - what material does the course cover
 \begin{frame}
-  \frametitle{Course material}
-  \begin{itemize}
+  \frametitle{Course material (chapters)}
+  \begin{enumerate}
   \item A DSL for arithmetic expressions and complex numbers
   \item Logic and calculational proofs
   \item Types in Mathematics
@@ -164,7 +252,7 @@ lim a f L  =  Forall (epsilon > 0) (Exists (delta > 0) (P epsilon delta))
   \item Higher-order Derivatives and their Applications
   \item Matrix algebra and linear transformations
   \item Exponentials and Laplace
-  \end{itemize}
+  \end{enumerate}
 \end{frame}
 
 %% -------------------------------------------------------------------
@@ -287,8 +375,8 @@ lim a f L  =  Forall (epsilon > 0) (Exists (delta > 0) (P epsilon delta))
   \item Working with earlier and later courses, can these ideas be useful in
     their curriculum?
   \item Better tool support in the course, proof systems?
-  \item More rigorous empirical evaluation of course efficacy
-
+  \item Polish the lecture notes into a book
+  \item (Perhaps: more rigorous empirical evaluation of course efficacy)
 \end{itemize}
 
 \end{frame}
