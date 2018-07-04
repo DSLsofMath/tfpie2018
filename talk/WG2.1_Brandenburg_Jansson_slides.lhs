@@ -6,10 +6,14 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8x]{inputenc}
 \usepackage{xcolor}
+\usepackage{tabu}
 \usepackage{hyperref}
 \hypersetup{pdfpagemode={FullScreen}}
 \RequirePackage{ucs}
 \RequirePackage{amsfonts}
+%include dslmagda.format
+%include tfpie2018slides.format
+
 \title[DSLM Examples \& Results]{Examples and Results from a BSc-level Course on\\ Domain Specific Languages of Mathematics}
 \date{WG2.1, 2018-07-05}
 \author[Jansson, Einarsdóttir, Ionescu]{
@@ -33,10 +37,6 @@
 \item 2015: paper at ``Trends in Functional Programming in Education''
 \item 2016, 17, 18: Undergraduate course at Chalmers (28, 43, 39 students)
 \item 2018: new TFPIE paper (reported on in this talk)
-\item Goal: Encourage students to approach mathematical domains from a
-  functional programming perspective.
-\item Lecture notes and more available at:
-  \url{https://github.com/DSLsofMath/DSLsofMath}
 \end{itemize}
 
 
@@ -52,8 +52,14 @@
 
 \begin{frame}
 % TODO: update title & contents!
-\frametitle{Course focus}
+\frametitle{Course goal and focus}
 
+\begin{block}{Goal}
+  Encourage students to approach mathematical domains from a
+  functional programming perspective.
+\end{block}
+
+\begin{block}{Course focus}
 \begin{itemize}
 \item Make functions and types explicit
 
@@ -67,8 +73,13 @@
 
 \item Make variable binding and scope explicit
 \end{itemize}
+\end{block}
 
+Lecture notes and more available at:
+  \url{https://github.com/DSLsofMath/DSLsofMath}
 \end{frame}
+
+
 
 %% -------------------------------------------------------------------
 
@@ -117,26 +128,27 @@
 \begin{frame}
   \frametitle{Limit of a function - continued}
 First attempt at translation:
-  \[
-  lim\; a\; f\; L  =  \forall (\varepsilon > 0) (\exists (\delta > 0) (P \; \varepsilon\; \delta))
-\]
-where
-\[P \;\varepsilon \;\delta = (0 < \lvert x - a\rvert < \delta) \Rightarrow (x \in
-  Dom\, f  \wedge \lvert f(x) - L\rvert < \varepsilon))\]
+\begin{spec}
+lim a f L  =  Forall (epsilon > 0) (Exists (delta > 0) (P epsilon delta))
+
+  where  P epsilon delta =  (0 < absBar (x - a) < delta) =>
+                            (x `elem` Dom f  && absBar (f x - L) < epsilon))
+\end{spec}
 \end{frame}
 
 %% -------------------------------------------------------------------
 
 \begin{frame}
   \frametitle{Limit of a function - continued}
-Finally:
-\[
-  lim\; a\; f\; L  =  \forall (\varepsilon > 0) (\exists (\delta > 0) (\forall x (P
-  \; \varepsilon\; \delta\; x)))
-\]
-where
-\[P \;\varepsilon \;\delta \; x = (0 < \lvert x - a\rvert < \delta) \Rightarrow (x \in
-  Dom\, f  \wedge \lvert f(x) - L\rvert < \varepsilon))\]
+Finally (after adding a binding for |x|):
+\begin{spec}
+lim a f L  =  Forall (epsilon > 0) (Exists (delta > 0) (P epsilon delta))
+
+  where  P epsilon delta =    Forall x (Q epsilon delta x)
+
+         Q epsilon delta x =  (0 < absBar (x - a) < delta) =>
+                              (x `elem` Dom f  && absBar (f x - L) < epsilon))
+\end{spec}
 \end{frame}
 
 %% -------------------------------------------------------------------
@@ -205,15 +217,17 @@ where
 \frametitle{Results in subsequent courses}
 \begin{table}[h]
   \centering
-  \begin{tabular}{l*{3}{c}}
+  \begin{tabu}{l*{3}{c}}
                        & PASS  & IN   & OUT  \\
     \hline
     TSS pass rate   & 77\%  & 57\% & 36\% \\
+    \rowfont{\scriptsize}
     TSS mean grade  & 4.23  & 4.10 & 3.58 \\
     Control pass rate   & 68\%  & 45\% & 40\% \\
+    \rowfont{\scriptsize}
     Control mean grade  & 3.91  & 3.88 & 3.35 \\
 
-  \end{tabular}
+  \end{tabu}
   %\caption{Pass rate and mean grade in third year courses for students who took and
   %  passed DSLsofMath and those who did not.}
 \end{table}
