@@ -141,7 +141,7 @@ First attempt at translation:
 lim a f L  =  Forall (epsilon > 0) (Exists (delta > 0) (P epsilon delta))
 
   where  P epsilon delta =  (0 < absBar (x - a) < delta) =>
-                            (x `elem` Dom f  && absBar (f x - L) < epsilon))
+                            (x `elem` Dom f  && absBar (f x - L) < epsilon)
 \end{spec}
 \end{frame}
 
@@ -156,7 +156,7 @@ lim a f L  =  Forall (epsilon > 0) (Exists (delta > 0) (P epsilon delta))
   where  P epsilon delta =    Forall x (Q epsilon delta x)
 
          Q epsilon delta x =  (0 < absBar (x - a) < delta) =>
-                              (x `elem` Dom f  && absBar (f x - L) < epsilon))
+                              (x `elem` Dom f  && absBar (f x - L) < epsilon)
 \end{spec}
 
 \pause
@@ -328,15 +328,17 @@ We need the ``source code'' of |f| to apply rules from calculus.
 \frametitle{Results in previous courses}
 \begin{table}[h]
   \centering
-  \begin{tabular}{l*{3}{c}}
+  \begin{tabu}{l*{3}{c}}
                                      & PASS  & IN   & OUT  \\
     \hline
     Pass rate for first 3 semesters  & 97\%  & 92\% & 86\% \\
+    \rowfont{\scriptsize}
     Mean grade for first 3 semesters & 3.95  & 3.81 & 3.50 \\
     Math/physics pass rate           & 96\%  & 91\% & 83\% \\
+    \rowfont{\scriptsize}
     Math/physics mean grade          & 4.01  & 3.84 & 3.55 \\
 
-  \end{tabular}
+  \end{tabu}
   %\caption{Pass rate and mean grade for courses taken prior to taking (or not
   % taking) DSLsofMath.}
 \end{table}
@@ -379,13 +381,243 @@ We need the ``source code'' of |f| to apply rules from calculus.
   \item (Perhaps: more rigorous empirical evaluation of course efficacy)
 \end{itemize}
 
-\end{frame}
-\begin{frame}
-  \frametitle{Thanks!}
+\pause
+  \textbf{Questions?}
   % Link to lecture notes!
+
   \url{https://github.com/DSLsofMath/DSLsofMath}
+
+  [Hint: There are bonus slides;-]
 \end{frame}
 
+\subsection{Type inference and understanding: Lagrangian case study}
+\begin{frame}{Example 3: Lagrangian}
+
+  From [Sussman 2013, Functional Differential Geometry]:
+
+\begin{quote}
+  A mechanical system is described by a Lagrangian function of the
+  system state (time, coordinates, and velocities).
+%
+  A motion of the system is described by a path that gives the
+  coordinates for each moment of time.
+%
+  A path is allowed if and only if it satisfies the Lagrange
+  equations.
+%
+  Traditionally, the Lagrange equations are written
+
+\[\frac{d}{dt} \frac{∂L}{∂\dot{q}} - \frac{∂L}{∂q} = 0\]
+
+What could this expression possibly mean?
+
+\end{quote}
+
+\end{frame}
+
+\begin{frame}{Lagrangian, cont.}
+\[\frac{d}{dt} \frac{∂L}{∂\dot{q}} - \frac{∂L}{∂q} = 0\]
+
+\begin{itemize}
+\item The use of notation for ``partial derivative'', \(∂L / ∂q\), suggests
+that |L| is a function of at least a pair of arguments:
+\begin{spec}
+  L : ℝⁱ → ℝ,    i ≥ 2
+\end{spec}
+
+This is consistent with the description: ``Lagrangian function of the
+system state (time, coordinates, and velocities)''.
+%
+So, if we let ``coordinates'' be just one coordinate, we can take |i =
+3|:
+%
+\begin{spec}
+  L : ℝ³ → ℝ
+\end{spec}
+%
+The ``system state'' here is a triple, of type |S = (T, Q, V)|,
+and we can call the the three components |t : T| for time, |q : Q| for
+coordinate, and |v : V| for velocity.
+%
+(|T = Q = V = ℝ|.)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Lagrangian, cont.}
+\[\frac{d}{dt} \frac{∂L}{∂\dot{q}} - \frac{∂L}{∂q} = 0\]
+
+\begin{itemize}
+\item Looking again at \(∂L / ∂q\), \(q\) is the name of a variable,
+  one of the 3 args to \(L\).
+%
+  In the context, which we do not have, we would expect to find
+  somewhere the definition of the Lagrangian as
+  %
+  \begin{spec}
+    L  :  (T, Q, V)  ->  ℝ
+    L     (t, q, v)  =   ...
+  \end{spec}
+
+\item therefore, \(∂L / ∂q\) should also be a function of the same
+  triple:
+
+  \begin{spec}
+    (∂L / ∂q) : (T, Q, V) -> ℝ
+  \end{spec}
+
+  It follows that the equation expresses a relation between
+  \emph{functions}, therefore the \(0\) on the right-hand side is
+  \emph{not} the real number \(0\), but rather the constant function
+  |const 0|:
+
+  \begin{spec}
+    const 0  :  (T, Q, V)  →  ℝ
+    const 0     (t, q, v)  =   0
+  \end{spec}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Lagrangian, cont.}
+\[\frac{d}{dt} \frac{∂L}{∂\dot{q}} - \frac{∂L}{∂q} = 0\]
+\begin{itemize}
+\item We now have a problem: |d / dt| can only be applied to functions
+  of \emph{one} real argument |t|, and the result is a function of one
+  real argument:
+
+%format dotq = "\dot{q}"
+%format ddotq =  ∂ dotq
+%format juxtapose f x = f "\," x
+\begin{spec}
+    juxtapose (d / dt) (∂L / ∂dotq)  :  T → ℝ
+\end{spec}
+
+Since we subtract from this the function \(∂L / ∂q\), it follows that
+this, too, must be of type |T -> ℝ|.
+%
+But we already typed it as |(T, Q, V) → ℝ|, contradiction!
+%
+\label{item:L:contra}
+
+\item The expression \(∂L / ∂\dot{q}\) appears to also be malformed.
+%
+  We would expect a variable name where we find \(\dot{q}\), but
+  \(\dot{q}\) is the same as \(dq / dt\), a function.
+\end{itemize}
+\end{frame}
+\begin{frame}{Lagrangian, cont.}
+\[\frac{d}{dt} \frac{∂L}{∂\dot{q}} - \frac{∂L}{∂q} = 0\]
+\begin{itemize}
+\item The only immediate candidate for an application of \(d/dt\) is
+  ``a path that gives the coordinates for each moment of time''.
+%
+  Thus, the path is a function of time, let us say
+%
+  \begin{spec}
+    w  :  T → Q  -- with |T| for time and |Q| for coords (|q : Q|)
+  \end{spec}
+
+  We can now guess that the use of the plural form ``equations'' might
+  have something to do with the use of ``coordinates''.
+%
+  In an |n|-dim.\ space, a position is given by |n| coordinates.
+%
+  A path would then be
+%
+  \begin{spec}
+    w  :  T → Q  -- with |Q = ℝⁿ|
+  \end{spec}
+%
+  which is equivalent to |n| functions of type |T → ℝ|, each computing
+  one coordinate as a function of time.
+%
+  We would then have an equation for each of them.
+%
+  We will use |n=1| for the rest of this example.
+
+\end{itemize}
+
+\end{frame}
+\begin{frame}{Lagrangian, cont.}
+\[\frac{d}{dt} \frac{∂L}{∂\dot{q}} - \frac{∂L}{∂q} = 0\]
+\begin{itemize}
+\item Now that we have a path, the coordinates at any time are given
+  by the path.
+  %
+  And as the time derivative of a coordinate is a velocity, we can
+  actually compute the trajectory of the full system state |(T, Q, V)|
+  starting from just the path.
+%
+  \begin{spec}
+    q  :  T → Q
+    q t  =  w t        -- or, equivalently, |q = w|
+
+    dotq : T → V
+    dotq t = dw /dt    -- or, equivalently, |dotq = D w|
+  \end{spec}
+%
+  We combine these in the ``combinator'' |expand|, given by
+  %
+  \begin{spec}
+    expand : (T → Q) → (T → (T, Q, V))
+    expand w t  =  (t, w t, D w t)
+  \end{spec}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Lagrangian, cont.}
+\[\frac{d}{dt} \frac{∂L}{∂\dot{q}} - \frac{∂L}{∂q} = 0\]
+\vspace{-0.5cm}
+\begin{itemize}
+\item With |expand| in our toolbox we can fix the typing problem.
+  %
+  \begin{spec}
+    (∂L / ∂q) . (expand w)  :  T -> ℝ
+  \end{spec}
+
+
+\item We now move to using |D| for |d / dt|, |D₂| for |∂ / ∂q|, and
+  |D₃| for |∂ / ∂dotq|.
+  %
+  In combination with |expand w| we find these type correct
+  combinations for the two terms in the equation:
+  %
+  \begin{spec}
+    D ((D₂ L)  ∘  (expand w))  :  T → ℝ
+       (D₃ L)  ∘  (expand w )  :  T → ℝ
+  \end{spec}
+
+  The equation becomes
+  %
+  \begin{spec}
+    D ((D₃ L) ∘ (expand w))  -  (D₂ L) ∘ (expand w)  =  const 0
+  \end{spec}
+  or, after simplification:
+  \begin{spec}
+    D (D₃ L ∘ expand w)  =  D₂ L ∘ expand w
+  \end{spec}
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Example 3: Lagrangian, summary}
+
+  ``A path is allowed if and only if it satisfies the Lagrange
+  equations'' means that this equation is a predicate on paths:
+  %
+  \begin{spec}
+    Lagrange(L, w) =  {-"\qquad"-} D (D₃ L ∘ expand w) == D₂ L ∘ expand w
+  \end{spec}
+  %
+
+  Thus: If we can describe a mechanical system in terms of ``a
+  Lagrangian'' (|L : S -> ℝ|), then we can use the predicate to check
+  if a particular candidate path |w : T → ℝ| qualifies as a ``motion
+  of the system'' or not.
+%
+  The unknown of the equation is the path |w|, and the equation is an
+  example of a partial differential equation (a PDE).
+
+\end{frame}
 
 \end{document}
 
