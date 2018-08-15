@@ -166,8 +166,9 @@ the names occurring in A.
 \label{sec:LimitOfFunction}
 
 This case is from Chapter two of the DSLsofMath lecture notes which
-talks about the definition of the limit of a function of type |REAL ->
-REAL| from \cite{adams2010calculus}:
+talks about the definition (from Adams \& Essex
+\cite{adams2010calculus}) of the limit of a function of type |REAL ->
+REAL|:
 
 \begin{quote}
   We say that \(f(x)\) \textbf{approaches the limit} \(L\) as \(x\)
@@ -243,7 +244,7 @@ exercise.)
 The lecture notes include some other material in between this example and the
 previous one, but here we
 jump directly to dissecting one of the classical definitions of the
-derivative (from \cite{adams2010calculus}).
+derivative (also from \cite{adams2010calculus}).
 %
 We now assume limits exist and use |lim| as a function from |a| and |f| to |L|.
 %
@@ -580,14 +581,29 @@ differential equation (a PDE).
 
 \section{Evaluation and results}
 
-% Describe how the ``measurements'' were done and interpret the results.
-
+Now we turn to the empirical evaluation of the course in terms of the
+students' pass rates and grades in related courses.
+%
 We considered student results for students from the CSE programme at Chalmers%
 \footnote{Computer Science and Engineering (CSE) is a five-year BSc+MSc
-  programme at Chalmers. It is called ``Datateknik (D)'' in Swedish.}
+  programme at Chalmers. It is called ``Datateknik'' (abbreviated ``D'') in Swedish.}
 who started their studies in 2014 and 2015. In the spring of their second year at
 Chalmers (2016 and 2017), these students had the option of either taking the
-DSLsofMath course or a course on Parallel computer organization and design.
+DSLsofMath course or a course on Concurrent Programming (see Table~\ref{tab:CSE-prog}).
+
+\begin{table}[htb]
+  \centering
+  \begin{tabular}{lll}
+                       & Fall  & Spring\\
+    \hline
+    Year 1  & \textcolor{gray}{Compulsory courses}  & \textcolor{gray}{Compulsory courses} \\
+    Year 2  & \textcolor{gray}{Compulsory courses}  & \textcolor{red}{DSLsofMath} OR ConcProg \\
+    Year 3  & \textcolor{blue}{TSS + Control}  & ... \\
+
+  \end{tabular}
+\caption{CSE programme stucure (simplified)}
+\label{tab:CSE-prog}
+\end{table}
 
 We considered only ``active'' students, that is, students who had signed up for
 at least half of the compulsory courses in the CSE programme during the semesters
@@ -596,19 +612,29 @@ being considered (Fall 2014 - Fall 2017). This amounted to 145 students, where
 passed the course.
 
 We had access to data on these students' results in all compulsory courses in
-the programme as well as the more common elective courses (21 courses in all).
+the programme as well as in the more common elective courses (21 courses in all).
 %
-At Chalmers students pass a course with a grade of 3, 4, or 5, with 5 being the
-highest grade, or fail the course with no specified grade. Students have many
-opportunities to retake exams from courses they took in past semesters, to
-attempt to obtain a passing score or improve their grade in the course.
+At Chalmers students pass a course with a grade of 3, 4, or 5, with 5
+being the highest grade, or fail the course with no specified grade.
+%
+Students usually have two yearly opportunities to retake exams from
+courses they took in past semesters, to attempt to obtain a passing
+score or to improve their grades.
 
+The enrollment and results of the DSLsofMath course itself was as follows:
+\begin{itemize}
+\item 2016: 28 students, pass rate: 68\%
+\item 2017: 43 students, pass rate: 58\%
+\item 2018: 39 students, pass rate: 89\%
+\end{itemize}
+Note that this also counts students from other programmes (mainly SE
+and Math) while the rest only deals with the CSE students.
 
 \subsection{Student results before and after taking DSLsofMath}
 
 Our hope was that taking our course would help prepare the students
-for the math-intensive compulsory courses in the subsequent year which
-many students struggle with,
+for the math-intensive compulsory courses in the subsequent year with which
+many students struggle;
 %
 Transforms, signals and systems (TSS%
 \footnote{In Swedish:
@@ -620,13 +646,13 @@ and Control theory (Control%
   \href{https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=24149&parsergrp=3}{ERE103
     Reglerteknik}})
 
-In the following table we see the pass rate and the mean grade (of those who
-passed) for the above mentioned courses, where PASS represents the students who
-took the DSLsofMath course and passed it, IN is the group of students who took
-DSLsofMath (whether or not they passed), and OUT is the students who did not
-sign up for DSLsofMath.
-
-\begin{table}[h]
+In Table~\ref{tab:passratesafter} we see the pass rate and the mean
+grade (of those who passed) for the above mentioned courses, where
+PASS represents the students who took the DSLsofMath course and passed
+it, IN is the group of students who took DSLsofMath (whether or not
+they passed), and OUT is the students who did not sign up for
+DSLsofMath.
+\begin{table}[htb]
   \centering
   \begin{tabular}{l*{3}{c}}
                        & PASS  & IN   & OUT  \\
@@ -639,29 +665,35 @@ sign up for DSLsofMath.
   \end{tabular}
   \caption{Pass rate and mean grade in third year courses for students who took and
   passed DSLsofMath and those who did not.}
+\label{tab:passratesafter}
 \end{table}
 
 As we can see, the students who took DSLsofMath had higher mean grades in the
 third-year courses and were more likely to pass, in particular those who managed
-to pass the DSLsofMath course. The correlation between taking, and especially
-passing, DSLsofMath and success in the third year courses is clear. But perhaps
-the students who chose to take our course did so because they enjoyed
-mathematics, and were already more likely to succeed in the subsequent
-math-heavy courses regardless of whether they took our course.
-
+to pass the DSLsofMath course.
+%
+The correlation between taking, and especially passing, DSLsofMath and
+success in the third year courses is clear.
+%
+But perhaps the students who chose to take our course did so because
+they enjoyed mathematics, and were already more likely to succeed in
+the subsequent math-heavy courses regardless of whether they took our
+course.
 %\subsubsection{Characterising students who chose DSLsofMath}
 %We were curious to see how we could characterize the students who sign up for
 %our course, for instance whether they were likely to be students who had done
 %well in mathematics in the past who were interested in studying more maths,
 %or perhaps students who had struggled with mathematics in the past and were
 %therefore looking for more support and new methods for studying maths.
-
-We looked at the students' results from their first three semesters at Chalmers,
-prior to having the option of taking DSLsofMath. We were particularly interested
-in students' performance in the compulsory mathematics and physics courses
-(for details see appendix \ref{app:coursecodes}).
+To explore this, we looked at the students' results from their first
+three semesters at Chalmers, prior to having the option of taking
+DSLsofMath.
 %
-\begin{table}[h]
+We were particularly interested in students' performance in the
+compulsory mathematics and physics courses (see
+Table~\ref{tab:passratesbefore}, and appendix \ref{app:coursecodes}).
+%
+\begin{table}[htb]
   \centering
   \begin{tabular}{l*{3}{c}}
                                      & PASS  & IN   & OUT  \\
@@ -674,6 +706,7 @@ in students' performance in the compulsory mathematics and physics courses
   \end{tabular}
   \caption{Pass rate and mean grade for courses taken prior to taking (or not
     taking) DSLsofMath.}
+\label{tab:passratesbefore}
 \end{table}
 
 Here we can see that there seems to be a small positive bias: those
@@ -688,6 +721,23 @@ Given that many other factors also vary it is not easy to prove that
 taking DSLsofMath is a significant factor in improving future results,
 but it does seem likely.
 
+% TODO Perhaps include the summary table:
+% \begin{table}[h]
+%   \centering
+%   \begin{tabular}{l*{3}{c}}
+%                                      & PASS  & IN   & OUT  \\
+%     \hline
+%     Pass rate for first 3 semesters  & 97\%  & 92\% & 86\% \\
+%     Math/physics pass rate           & 96\%  & 91\% & 83\% \\
+%     TSS pass rate                    & 77\%  & 57\% & 36\% \\
+%     Control pass rate                & 68\%  & 45\% & 40\% \\
+%
+%   \end{tabular}
+%   %\caption{Pass rate and mean grade for courses taken prior to taking (or not
+%   % taking) DSLsofMath.}
+% \end{table}
+%   Group sizes: PASS 34, IN 53, OUT 92 (145 in all)
+%
 
 \subsection{Students' course assessment and resulting changes}
 
@@ -847,6 +897,43 @@ and innovation programme.
 
 \url{https://github.com/DSLsofMath/DSLsofMath/blob/master/Course2018.md}
 
+\section{Course codes}
+\label{app:coursecodes}
+The courses used to calculate the first 3 semesters pass rate and mean
+grade are the ones listed above DSLsofMath (DAT326) in Table~\ref{tab:coursecodes}.
+%
+Of these, the ones used to calculate the Math/physics pass rate and
+mean grade were TMV210, TMV216, TMV170, MVE055 and TIF085.
+%
+\begin{table}[htb]
+  \centering
+\begin{tabular}{lll}
+    Course code & & Name
+\\\hline
+    TDA555 &   & Introduktion till funktionell programmering
+\\  TMV210 & M & Inledande diskret matematik
+\\  EDA452 &   & Grundläggande datorteknik
+\\  TMV216 & M & Linjär algebra
+\\  DAT043 &   & Objektorienterad programmering
+\\  TMV170 & M & Matematisk analys
+\\  EDA343 &   & Datakommunikation
+\\  EDA481 &   & Maskinorienterad programmering
+\\  DAT290 &   & Datatekniskt projekt
+\\  MVE055 & M & Matematisk statistik och diskret matematik
+\\  DAT037 &   & Datastrukturer
+\\  TIF085 & F & Fysik för ingenjörer
+\\\hline DAT326 & * & Matematikens domänspecifika språk
+\\\hline  SSY080 &   & Transformer, signaler och system
+\\  ERE103 &   & Reglerteknik
+\end{tabular}
+\caption{Course codes}
+\label{tab:coursecodes}
+\end{table}
+
+
+% SSY080 Transformer, signaler och system  % https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=28314&parsergrp=3
+% ERE103 Reglerteknik                      % https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=24149&parsergrp=3
+
 
 \section{BSc project ``Learn You a Physics''}
 \label{app:LearnYouAPhysics}
@@ -877,39 +964,6 @@ University of Gothenburg.
 The \href{https://github.com/DSLsofMath/BScProj2018/tree/master/Physics}{source
   code} and \href{https://dslsofmath.github.io/BScProj2018/}{learning material}
 is freely available online.
-
-\section{Course codes}
-\label{app:coursecodes}
-
-
-\begin{tabular}{lll}
-    Course code & & Name
-\\  TDA555 &   & Introduktion till funktionell programmering
-\\  TMV210 & M & Inledande diskret matematik
-\\  EDA452 &   & Grundläggande datorteknik
-\\  TMV216 & M & Linjär algebra
-\\  DAT043 &   & Objektorienterad programmering
-\\  TMV170 & M & Matematisk analys
-\\  EDA343 &   & Datakommunikation
-\\  EDA481 &   & Maskinorienterad programmering
-\\  DAT290 &   & Datatekniskt projekt
-\\  MVE055 & M & Matematisk statistik och diskret matematik
-\\  DAT037 &   & Datastrukturer
-\\  TIF085 & F & Fysik för ingenjörer
-\\\hline DAT326 & * & Matematikens domänspecifika språk
-\\\hline  SSY080 &   & Transformer, signaler och system
-\\  ERE103 &   & Reglerteknik
-\end{tabular}
-
-The courses used to calculate the first 3 semesters pass rate and mean
-grade are the ones listed above DSLsofMath (DAT326) in the table.
-%
-Of these, the ones used to calculate the Math/physics pass rate and
-mean grade were TMV210, TMV216, TMV170, MVE055 and TIF085.
-
-
-% SSY080 Transformer, signaler och system  % https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=28314&parsergrp=3
-% ERE103 Reglerteknik                      % https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=24149&parsergrp=3
 
 
 
