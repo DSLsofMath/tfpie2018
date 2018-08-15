@@ -331,8 +331,11 @@ but here are just a few examples to get used to the notation.
   sq x      =  x^2
   double x  =  2*x
   c2 x      =  2
-  sq'   =  D sq   = D (\x -> x^2) = D ({-"{}"-}^2) = (2*) = double
-  sq''  =  D sq'  = D double = c2 = const 2
+\end{spec}
+Then we have
+\begin{spec}
+  sq'   ==  D sq   == D (\x -> x^2) == D ({-"{}"-}^2) == (2*) == double
+  sq''  ==  D sq'  == D double == c2 == const 2
 \end{spec}
 
 What we cannot do at this stage is to actually \emph{implement} |D| in
@@ -347,6 +350,17 @@ apply the usual rules we have learnt in calculus.
 
 \section{Type inference and understanding: Lagrangian case study}
 \label{sec:Lagrangian}
+
+
+The lecture notes goes on through several other definitions related to
+derivatives, including partial derivatives \(D_i = ∂\!f/∂x_i\) of type
+\((ℝⁿ → ℝ) → (ℝⁿ → ℝ)\).
+%
+As an example, we can define |D₃| in terms of |D|:
+\begin{spec}
+D₃ f (x1, x2, x3) = D g x3
+  where g x = f (x1, x2, x)   -- |g : ℝ → ℝ| keeps |x1| and |x2| constant
+\end{spec}
 
 Our third case study from the lecture notes is the analysis of
 Lagrangian equations, also studied in Sussman and Wisdom 2013
@@ -521,7 +535,7 @@ But we already typed it as |(T, Q, V) → ℝ|, contradiction!
   have
   %
   \begin{spec}
-    (∂L / ∂q) . (expand w)  :  T -> ℝ
+    (∂L / ∂dotq) . (expand w)  :  T -> ℝ
   \end{spec}
   %
   which is used inside |d / dt|.
@@ -533,8 +547,8 @@ But we already typed it as |(T, Q, V) → ℝ|, contradiction!
   combinations for the two terms in the equation:
   %
   \begin{spec}
-    D ((D₂ L)  ∘  (expand w))  :  T → ℝ
-       (D₃ L)  ∘  (expand w )  :  T → ℝ
+    D ((D₃ L)  ∘  (expand w))  :  T → ℝ
+       (D₂ L)  ∘  (expand w )  :  T → ℝ
   \end{spec}
 
   The equation becomes
@@ -905,6 +919,7 @@ grade are the ones listed above DSLsofMath (DAT326) in Table~\ref{tab:coursecode
 Of these, the ones used to calculate the Math/physics pass rate and
 mean grade were TMV210, TMV216, TMV170, MVE055 and TIF085.
 %
+%TODO: Dig up English course names?
 \begin{table}[htb]
   \centering
 \begin{tabular}{lll}
