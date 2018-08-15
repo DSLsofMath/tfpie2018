@@ -1,10 +1,11 @@
 %-*-Latex-*-
-\documentclass{../eptcsstyle/eptcs}
+\documentclass{eptcs}
 
 % current annoyance: this will be fixed
 % by the next update of agda.fmt
 \def\textmu{}
 
+\usepackage{breakurl}
 \usepackage[fleqn]{amsmath}
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8x]{inputenc}
@@ -118,10 +119,11 @@ set the scene, and we present an evaluation of the student results.
 The DSLsofMath activity has also lead to other developments not
 covered in this paper: presentations at TFPIE 2015, the Workshop on
 Domain Specific Languages Design and Implementation (DSLDI 2015), IFIP
-Working Group 2.1 on Algorithmic Languages and Calculi meeting in 2015, and two
-BSc thesis projects (one in 2016 about Transforms, Signals, and
-Systems \cite{JonssonTSLwithDLS2016} and one in 2018 called ``Learn
-You a Physics'' --- see appendix \ref{app:LearnYouAPhysics}).
+Working Group 2.1 on Algorithmic Languages and Calculi meeting in
+2015, and two BSc thesis projects (one in 2016 about Transforms,
+Signals, and Systems \cite{JonssonTSLwithDLS2016} and one in 2018
+called ``Learn You a Physics''\cite{LearnYouaPhysicsBSc2018} --- see
+appendix \ref{app:LearnYouAPhysics}).
 
 % WG2.1: 2015 http://www.cse.chalmers.se/~patrikj/talks/WG2.1_Goteborg_Jansson_Ionescu_DSLsofMath.pdf
 
@@ -186,7 +188,7 @@ REAL| from \cite{adams2010calculus}:
 
 \noindent
 The |lim| notation has four components: a variable name |x|, a point
-|a| an expression \(f(x)\) and the limit |L|.
+|a|, an expression \(f(x)\), and the limit |L|.
 %
 The variable name and the expression can be combined into just the
 function |f| and this leaves us with three essential components: |a|, |f|,
@@ -912,6 +914,6 @@ mean grade were TMV210, TMV216, TMV170, MVE055 and TIF085.
 
 
 
-\bibliographystyle{../eptcsstyle/eptcs}
+\bibliographystyle{eptcs}
 \bibliography{dslm}
 \end{document}

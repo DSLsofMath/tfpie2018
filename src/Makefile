@@ -17,18 +17,17 @@ www: ${PREPRINT}
 	cp ${PREPRINT} ~/jobb/www/www.cse.chalmers.se/papers/
 	unison jobb
 
-PREPRINT = Jansson_Einardottir_Ionescu_DSLsofMath_TFPIE_2018_paper_preprint.pdf
+PREPRINT = Jansson_Einarsdottir_Ionescu_DSLsofMath_TFPIE_2018_paper_preprint.pdf
 
 ${PREPRINT}: ${NAME}.pdf
 	ln -s ${NAME}.pdf ${PREPRINT}
 
-# URL: http://www.cse.chalmers.se/~patrikj/papers/Jansson_Einardottir_Ionescu_DSLsofMath_TFPIE_2018_paper_preprint.pdf
+# URL: http://www.cse.chalmers.se/~patrikj/papers/Jansson_Einarsdottir_Ionescu_DSLsofMath_TFPIE_2018_paper_preprint.pdf
 
 upload: DSLsofMath.zip
 
 DSLsofMath.zip: dslm.tex
 	-mkdir DSLsofMath
-	cp dslm.bib ../eptcsstyle/eptcs.cls ../eptcsstyle/eptcs.bst DSLsofMath/
-	sed s+../eptcsstyle/eptcs+eptcs+g dslm.tex > DSLsofMath/dslm.tex
-	(cd DSLsofMath; latexmk -pdf)
+	cp dslm.bib eptcs.cls eptcs.bst DSLsofMath/
+	(cd DSLsofMath && latexmk -pdf && latexmk -c)
 	zip -r DSLsofMath DSLsofMath
