@@ -13,6 +13,9 @@
 %include dslmagda.format
 %include dslm.format
 \usepackage{todonotes}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+%\usetikzlibrary{trees,graphs,quotes}
 
 % the `doubleequals' macro is due to Jeremy Gibbons
 \def\doubleequals{\mathrel{\unitlength 0.01em
@@ -224,8 +227,11 @@ quantifier that binds |x|.
 Thus we get this definition:
 %
 \begin{spec}
-lim a f L  =  Forall (epsilon > 0) (Exists (delta > 0) (Forall x (P epsilon delta x)))
-  where  P epsilon delta x = (0 < absBar (x - a) < delta) => (x `elem` Dom f  && absBar (f x - L) < epsilon))
+lim a f L  =  Forall (epsilon > 0) (Exists (delta > 0) (P epsilon delta))
+
+  where  P epsilon delta =    Forall x (Q epsilon delta x)
+
+         Q epsilon delta x =  (0 < absBar (x - a) < delta) =>                              (x `elem` Dom f  && absBar (f x - L) < epsilon)
 \end{spec}
 %
 The predicate |lim| can be shown to be a partial function of two
@@ -312,10 +318,17 @@ handy:
 %
 To sum up, here are the steps again, now with typed helpers:
 
+\newsavebox{\diagramD}
+\savebox{\diagramD}{%
+\begin{tikzcd}
+         \pgfmatrixnextcell \arrow[dl, "|D f|", swap] \arrow[d, "|psi f|"] |REAL| \\
+  |REAL| \pgfmatrixnextcell \arrow[l, "|lim 0|"] |(REAL->REAL)|
+\end{tikzcd}%
+}
 \begin{spec}
   D f x  = lim 0 g        where            g  h = frac (f(x+h) - f x) h; {-"\quad"-}  g    :                             REAL -> REAL
   D f x  = lim 0 (phi x)  where       phi  x  h = frac (f(x+h) - f x) h;              phi  :                    REAL ->  REAL -> REAL
-  D f    = lim 0 . psi f  where  psi  f    x  h = frac (f(x+h) - f x) h;              psi  : (REAL -> REAL) ->  REAL ->  REAL -> REAL
+  D f    = lim 0 . psi f  where  psi  f    x  h = frac (f(x+h) - f x) h;              psi  : (REAL -> REAL) ->  REAL ->  REAL -> REAL {-"\usebox{\diagramD}"-}
 \end{spec}
 
 
@@ -332,7 +345,7 @@ but here are just a few examples to get used to the notation.
   double x  =  2*x
   c2 x      =  2
 \end{spec}
-Then we have
+Then we have the following equalities:
 \begin{spec}
   sq'   ==  D sq   == D (\x -> x^2) == D ({-"{}"-}^2) == (2*) == double
   sq''  ==  D sq'  == D double == c2 == const 2
