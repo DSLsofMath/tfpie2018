@@ -399,7 +399,7 @@ What could this expression possibly mean?
 \end{quote}
 
 \noindent
-To start answering the question, we start typing the elements involved:
+In order to answer Sussman and Wisdom's question, we start by inferring the types of the elements involved:
 
 \begin{enumerate}
 \item The use of notation for ``partial derivative'', \(∂L / ∂q\), suggests
@@ -603,6 +603,20 @@ The unknown of the equation is the path |w|, and as the equation
 involves partial derivatives it is an example of a partial
 differential equation (a PDE).
 %
+
+It is instructive to compare our treatment to Sussman and Wisdom's
+own answer to their question.
+%
+Although their approach is very similar in spirit (``we use computer
+programming in a functional style to encourage clear thinking'', page
+\emph{xv}), we and our students have found their explanations hard to follow.
+%
+Their main vehicle for expressing computations, the programming
+language Scheme, is dynamically typed, and encourages a style in which
+the typing information is left implicit.
+%
+As this example illustrates,
+we have found that having explicit typing is the better choice.
 
 
 
