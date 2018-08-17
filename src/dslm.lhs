@@ -608,8 +608,9 @@ It is instructive to compare our treatment to Sussman and Wisdom's
 own answer to their question.
 %
 Although their approach is very similar in spirit (``we use computer
-programming in a functional style to encourage clear thinking'', page
-\emph{xv}), we and our students have found their explanations hard to follow.
+programming in a functional style to encourage clear thinking'',
+\cite[page \emph{xv}]{sussman2013functional}), we and our students
+have found their explanations hard to follow.
 %
 Their main vehicle for expressing computations, the programming
 language Scheme, is dynamically typed, and encourages a style in which
@@ -642,7 +643,7 @@ DSLsofMath course or a course on Concurrent Programming (see Table~\ref{tab:CSE-
     Year 3  & \textcolor{blue}{TSS + Control}  & ... \\
 
   \end{tabular}
-\caption{CSE programme stucure (simplified)}
+\caption{CSE programme structure (simplified)}
 \label{tab:CSE-prog}
 \end{table}
 
@@ -662,7 +663,7 @@ Students usually have two yearly opportunities to retake exams from
 courses they took in past semesters, to attempt to obtain a passing
 score or to improve their grades.
 
-The enrollment and results of the DSLsofMath course itself was as follows:
+The enrolment and results of the DSLsofMath course itself was as follows:
 \begin{itemize}
 \item 2016: 28 students, pass rate: 68\%
 \item 2017: 43 students, pass rate: 58\%
@@ -938,45 +939,6 @@ and innovation programme.
 
 \url{https://github.com/DSLsofMath/DSLsofMath/blob/master/Course2018.md}
 
-\section{Course codes}
-\label{app:coursecodes}
-The courses used to calculate the first 3 semesters pass rate and mean
-grade are the ones listed above DSLsofMath (DAT326) in Table~\ref{tab:coursecodes}.
-%
-Of these, the ones used to calculate the Math/physics pass rate and
-mean grade were TMV210, TMV216, TMV170, MVE055 and TIF085.
-%
-%TODO: Dig up English course names?
-\begin{table}[htb]
-  \centering
-\begin{tabular}{lll}
-    Course code & & Name
-\\\hline
-    TDA555 &   & Introduktion till funktionell programmering
-\\  TMV210 & M & Inledande diskret matematik
-\\  EDA452 &   & Grundläggande datorteknik
-\\  TMV216 & M & Linjär algebra
-\\  DAT043 &   & Objektorienterad programmering
-\\  TMV170 & M & Matematisk analys
-\\  EDA343 &   & Datakommunikation
-\\  EDA481 &   & Maskinorienterad programmering
-\\  DAT290 &   & Datatekniskt projekt
-\\  MVE055 & M & Matematisk statistik och diskret matematik
-\\  DAT037 &   & Datastrukturer
-\\  TIF085 & F & Fysik för ingenjörer
-\\\hline DAT326 & * & Matematikens domänspecifika språk
-\\\hline  SSY080 &   & Transformer, signaler och system
-\\  ERE103 &   & Reglerteknik
-\end{tabular}
-\caption{Course codes}
-\label{tab:coursecodes}
-\end{table}
-
-
-% SSY080 Transformer, signaler och system  % https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=28314&parsergrp=3
-% ERE103 Reglerteknik                      % https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=24149&parsergrp=3
-
-
 \section{BSc project ``Learn You a Physics''}
 \label{app:LearnYouAPhysics}
 
@@ -1006,6 +968,45 @@ University of Gothenburg.
 The \href{https://github.com/DSLsofMath/BScProj2018/tree/master/Physics}{source
   code} and \href{https://dslsofmath.github.io/BScProj2018/}{learning material}
 is freely available online.
+
+\section{Course codes}
+\label{app:coursecodes}
+The courses used to calculate the first 3 semesters pass rate and mean
+grade are the ones listed above DSLsofMath (DAT326) in Table~\ref{tab:coursecodes}.
+%
+Of these, the ones used to calculate the Math/physics pass rate and
+mean grade were TMV210, TMV216, TMV170, MVE055 and TIF085.
+%
+\begin{table}[htb]
+  \centering
+\begin{tabular}{lll}
+    Course code & & Name
+\\\hline
+         TDA555 &   & Introduction to functional programming            % Introduktion till funktionell programmering
+\\       TMV210 & M & Introduction to discrete mathematics		% Inledande diskret matematik
+\\       EDA452 &   & Introduction to computer engineering		% Grundläggande datorteknik
+\\       TMV216 & M & Linear algebra					% Linjär algebra
+\\       DAT043 &   & Object oriented programming			% Objektorienterad programmering
+\\       TMV170 & M & Calculus						% Matematisk analys
+\\       EDA343 &   & Computer communication				% Datakommunikation
+\\       EDA481 &   & Machine oriented programming			% Maskinorienterad programmering
+\\       DAT290 &   & Computer science and engineering project		% Datatekniskt projekt
+\\       MVE055 & M & Mathematical statistics and discrete mathematics	% Matematisk statistik och diskret matematik
+\\       DAT037 &   & Data structures					% Datastrukturer
+\\       TIF085 & F & Physics for engineers				% Fysik för ingenjörer
+\\\hline DAT326 & * & Domain Specific Languages of Mathematics		% Matematikens domänspecifika språk
+\\\hline SSY080 &   & Transforms, signals and systems			% Transformer, signaler och system
+\\       ERE103 &   & Control theory					% Reglerteknik
+\end{tabular}
+\caption{Course codes}
+\label{tab:coursecodes}
+\end{table}
+
+
+% SSY080 Transformer, signaler och system  % https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=28314&parsergrp=3
+% ERE103 Reglerteknik                      % https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=24149&parsergrp=3
+
+
 
 
 
