@@ -1,0 +1,7 @@
+https://twitter.com/patrikja/status/1033095008428220424
+
+Learning Calculus through #Haskell
+Paper submitted to EPTCS:  "Examples and Results from a BSc Course on DSLs of Mathematics" http://www.cse.chalmers.se/~patrikj/papers/Janssonetal_DSLsofMathCourseExamplesResults_preprint_2018-08-17.pdf …
+Jansson, Einarsdóttir, Ionescu
+@CoeGSS @GRACeFULproject @ChalmersICT
+Course material: https://github.com/DSLsofMath/DSLsofMath
