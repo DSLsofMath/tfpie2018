@@ -1,6 +1,6 @@
 # DSLsofMath paper for TFPIE2018
 
-This is a work-in-progress repo for a paper reporting on the results of the new DSLsofMath course in Gothenburg. The draft paper was presented at TFPIE 2018 in June 2018 (see link below).
+This is the repo for a paper reporting on the results of the new DSLsofMath course in Gothenburg. The draft paper was presented at TFPIE 2018 in June 2018 (see link below) and is under evaluation.
 
 Title: Examples and Results from a BSc-level Course on Domain Specific Languages of Mathematics
 
@@ -16,3 +16,20 @@ At the workshop on Trends in Functional Programming in Education (TFPIE) in 2015
 * [TFPIE 2018 talk slides](http://www.cse.chalmers.se/~patrikj/talks/TFPIE_2018_Solrun_DSLsofMath.pdf)
 * [Main course repository](https://github.com/DSLsofMath/DSLsofMath)
 * Earlier TFPIE paper: [full paper on arXiv](https://arxiv.org/abs/1611.09475), [source code](https://github.com/DSLsofMath/tfpie2015)
+
+## Reference:
+
+```bibtex
+@inproceedings{TFPIE18_DSLMResults_JanssonEinarsdottirIonescu,
+  author =	 {Patrik Jansson and Sólrún Halla Einarsdóttir and Cezar Ionescu},
+  title =	 {Examples and Results from a BSc-level Course on Domain Specific Languages of Mathematics},
+  booktitle =	 {Proc. 7th Int. Workshop on Trends in Functional Programming in Education},
+  publisher =	 {Open Publishing Association},
+  longseries =	 {Electronic Proceedings in Theoretical Computer Science},
+  series =	 {EPTCS},
+  year =	 2018,
+  note =	 {In submission. Presented at TFPIE 2018.},
+  URL =          "http://www.cse.chalmers.se/~patrikj/papers/Janssonetal_DSLsofMathCourseExamplesResults_preprint_2018-08-17.pdf"
+}
+
+```
