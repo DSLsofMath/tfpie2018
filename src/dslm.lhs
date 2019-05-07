@@ -42,7 +42,7 @@
   \email{\quad slrn@@chalmers.se}
 \and
   Cezar Ionescu
-  \institute{Chalmers Univ. of Technology}%TODO: perhaps Oxford now?
+  \institute{ Oxford } % TODO - make sure this is correct
   \email{cezar@@chalmers.se}
 }
 
@@ -109,8 +109,6 @@ student results.
 Now, three years later, we have seen three groups of learners attend
 the course, and the first two groups have also continued on to take
 mathematically challenging compulsory courses in the subsequent year.
-%*TODO: what is the best wording?: class / cohort / group / form ...
-%\todo{more on current status (student counts, hints about results from LADOK)}
 
 The course focus is on types and specifications and on the syntax and semantics
 of domain specific languages used as tools for thinking
@@ -291,9 +289,6 @@ Now, with the type of |D| sorted out, we can turn to the actual
 definition of the function |D f|.
 %
 The definition is given for a fixed (but arbitrary) |x|.
-%**DONE: removed this back reference now when they are in direct sequence
-% (At this point it is useful to briefly look back to the definition of
-% ``limit of a function'' in Section~\ref{sec:LimitOfFunction}.)
 %
 The |lim| expression is using the (anonymous) function |g h = frac
 (f(x+h) - f x) h| and that the limit of |g| is taken at |0|.
@@ -855,7 +850,6 @@ equations can be explored and explained using typed functional programming.
 %
 We have investigated the group of students who picked DSLsofMath as an elective
 and we have measured positive results on later courses with mathematical content.
-%\todo[inline]{TODO[Solrun] perhaps add more ``meat'' about the student results}
 
 There are several avenues for future work: upstream and downstream curriculum
 changes, better tool support, and empirical evaluation.
@@ -1001,15 +995,6 @@ mean grade were TMV210, TMV216, TMV170, MVE055 and TIF085.
 \caption{Course codes}
 \label{tab:coursecodes}
 \end{table}
-
-
-% SSY080 Transformer, signaler och system  % https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=28314&parsergrp=3
-% ERE103 Reglerteknik                      % https://student.portal.chalmers.se/en/chalmersstudies/courseinformation/Pages/SearchCourse.aspx?course_id=24149&parsergrp=3
-
-
-
-
-
 
 \bibliographystyle{eptcs}
 \bibliography{dslm}
