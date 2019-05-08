@@ -42,8 +42,8 @@
   \email{\quad slrn@@chalmers.se}
 \and
   Cezar Ionescu
-  \institute{ Oxford } % TODO - make sure this is correct
-  \email{cezar@@chalmers.se}
+  \institute{University of Oxford}
+  \email{\quad cezar.ionescu@@conted.ox.ac.uk}
 }
 
 \def\titlerunning{Examples from DSLs of Mathematics}
